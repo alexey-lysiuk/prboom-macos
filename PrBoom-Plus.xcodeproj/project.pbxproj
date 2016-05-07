@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A225AB11CDDF987009481D2 /* i_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8AE21CDDDD6600ED0040 /* i_system.c */; };
+		8A225AB21CDDF98A009481D2 /* i_network.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8B0F1CDDDD6700ED0040 /* i_network.c */; };
+		8A225AB31CDDF992009481D2 /* d_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A231CDDDD6600ED0040 /* d_server.c */; };
+		8A225AB61CDDFA14009481D2 /* libSDL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A225AB41CDDF9FB009481D2 /* libSDL.a */; };
+		8A225AB71CDDFA16009481D2 /* libSDL_net.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A225AB51CDDFA05009481D2 /* libSDL_net.a */; };
+		8A225AB81CDDFADE009481D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8AC014751CDE127300DA951B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A8F1CDDDD6600ED0040 /* SDLMain.m */; };
+		8AC014981CDE133C00DA951B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC014971CDE133C00DA951B /* OpenGL.framework */; };
+		8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
+		8AC0152E1CDE171F00DA951B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
+		8AC015321CDE172E00DA951B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015311CDE172E00DA951B /* Carbon.framework */; };
+		8AC015361CDE173400DA951B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015311CDE172E00DA951B /* Carbon.framework */; };
+		8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015F21CDE174C00DA951B /* IOKit.framework */; };
+		8AC016A41CDE175900DA951B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015F21CDE174C00DA951B /* IOKit.framework */; };
 		8AEC8A101CDDDCFC00ED0040 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A0E1CDDDCFC00ED0040 /* MainMenu.nib */; };
 		8AEC8B5F1CDDDE1300ED0040 /* ANSIString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A741CDDDD6600ED0040 /* ANSIString.m */; };
 		8AEC8B601CDDDE1400ED0040 /* ConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A771CDDDD6600ED0040 /* ConsoleController.m */; };
@@ -22,8 +36,55 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A225AAD1CDDF96E009481D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A225A961CDDF93D009481D2;
+			remoteInfo = "PrBoom-Plus";
+		};
+		8A225AAF1CDDF96F009481D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A225AA31CDDF947009481D2;
+			remoteInfo = "Server-Plus";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A225A951CDDF93D009481D2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8A225AA21CDDF947009481D2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8A225A971CDDF93D009481D2 /* PrBoom-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PrBoom-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A225AA41CDDF947009481D2 /* Server-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Server-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A225AB41CDDF9FB009481D2 /* libSDL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL.a; path = thirdparty/SDL/lib/libSDL.a; sourceTree = "<group>"; };
+		8A225AB51CDDFA05009481D2 /* libSDL_net.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_net.a; path = thirdparty/SDL_net/lib/libSDL_net.a; sourceTree = "<group>"; };
+		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8AC0150D1CDE16C100DA951B /* libSDL_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_image.a; path = thirdparty/SDL_image/lib/libSDL_image.a; sourceTree = "<group>"; };
+		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		8AC015311CDE172E00DA951B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8AC015F21CDE174C00DA951B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		8AEC8A0F1CDDDCFC00ED0040 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = prboom/src/MAC/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		8AEC8A111CDDDD1D00ED0040 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = prboom/src/MAC/Info.plist; sourceTree = "<group>"; };
 		8AEC8A121CDDDD1D00ED0040 /* Launcher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Launcher.icns; path = prboom/src/MAC/Launcher.icns; sourceTree = "<group>"; };
@@ -326,11 +387,35 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8A225A941CDDF93D009481D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A225AA11CDDF947009481D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC0152E1CDE171F00DA951B /* AudioUnit.framework in Frameworks */,
+				8AC015361CDE173400DA951B /* Carbon.framework in Frameworks */,
+				8A225AB81CDDFADE009481D2 /* Cocoa.framework in Frameworks */,
+				8AC016A41CDE175900DA951B /* IOKit.framework in Frameworks */,
+				8AC014981CDE133C00DA951B /* OpenGL.framework in Frameworks */,
+				8A225AB61CDDFA14009481D2 /* libSDL.a in Frameworks */,
+				8A225AB71CDDFA16009481D2 /* libSDL_net.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */,
+				8AC015321CDE172E00DA951B /* Carbon.framework in Frameworks */,
+				8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +426,8 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Launcher.app */,
+				8A225A971CDDF93D009481D2 /* PrBoom-Plus */,
+				8A225AA41CDDF947009481D2 /* Server-Plus */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,7 +437,7 @@
 			children = (
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				8AEC8A0D1CDDDCE500ED0040 /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				29B97323FDCFA39411CA2CEA /* Dependencies */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = "PrBoom-Plus";
@@ -561,12 +648,19 @@
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+		29B97323FDCFA39411CA2CEA /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				8AC0151B1CDE170F00DA951B /* AudioUnit.framework */,
+				8AC015311CDE172E00DA951B /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				8AC015F21CDE174C00DA951B /* IOKit.framework */,
+				8AC014971CDE133C00DA951B /* OpenGL.framework */,
+				8A225AB41CDDF9FB009481D2 /* libSDL.a */,
+				8AC0150D1CDE16C100DA951B /* libSDL_image.a */,
+				8A225AB51CDDFA05009481D2 /* libSDL_net.a */,
 			);
-			name = Frameworks;
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 		8AEC8A0D1CDDDCE500ED0040 /* Resources */ = {
@@ -733,6 +827,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A225A961CDDF93D009481D2 /* PrBoom-Plus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A225A9F1CDDF93D009481D2 /* Build configuration list for PBXNativeTarget "PrBoom-Plus" */;
+			buildPhases = (
+				8A225A931CDDF93D009481D2 /* Sources */,
+				8A225A941CDDF93D009481D2 /* Frameworks */,
+				8A225A951CDDF93D009481D2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PrBoom-Plus";
+			productName = "PrBoom-Plus";
+			productReference = 8A225A971CDDF93D009481D2 /* PrBoom-Plus */;
+			productType = "com.apple.product-type.tool";
+		};
+		8A225AA31CDDF947009481D2 /* Server-Plus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A225AAA1CDDF947009481D2 /* Build configuration list for PBXNativeTarget "Server-Plus" */;
+			buildPhases = (
+				8A225AA01CDDF947009481D2 /* Sources */,
+				8A225AA11CDDF947009481D2 /* Frameworks */,
+				8A225AA21CDDF947009481D2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Server-Plus";
+			productName = "Server-Plus";
+			productReference = 8A225AA41CDDF947009481D2 /* Server-Plus */;
+			productType = "com.apple.product-type.tool";
+		};
 		8D1107260486CEB800E47090 /* Launcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Launcher" */;
@@ -744,6 +872,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				8A225AAE1CDDF96E009481D2 /* PBXTargetDependency */,
+				8A225AB01CDDF96F009481D2 /* PBXTargetDependency */,
 			);
 			name = Launcher;
 			productInstallPath = "$(HOME)/Applications";
@@ -771,6 +901,8 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Launcher */,
+				8A225A961CDDF93D009481D2 /* PrBoom-Plus */,
+				8A225AA31CDDF947009481D2 /* Server-Plus */,
 			);
 		};
 /* End PBXProject section */
@@ -788,6 +920,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A225A931CDDF93D009481D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A225AA01CDDF947009481D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A225AB11CDDF987009481D2 /* i_system.c in Sources */,
+				8A225AB21CDDF98A009481D2 /* i_network.c in Sources */,
+				8A225AB31CDDF992009481D2 /* d_server.c in Sources */,
+				8AC014751CDE127300DA951B /* SDLMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -807,6 +957,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8A225AAE1CDDF96E009481D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A225A961CDDF93D009481D2 /* PrBoom-Plus */;
+			targetProxy = 8A225AAD1CDDF96E009481D2 /* PBXContainerItemProxy */;
+		};
+		8A225AB01CDDF96F009481D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A225AA31CDDF947009481D2 /* Server-Plus */;
+			targetProxy = 8A225AAF1CDDF96F009481D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8AEC8A0E1CDDDCFC00ED0040 /* MainMenu.nib */ = {
 			isa = PBXVariantGroup;
@@ -819,6 +982,96 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8A225A9D1CDDF93D009481D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8A225A9E1CDDF93D009481D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8A225AAB1CDDF947009481D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8A225AAC1CDDF947009481D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -848,8 +1101,19 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					thirdparty/SDL/include,
+					thirdparty/SDL_image/include,
+					thirdparty/SDL_net/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					thirdparty/SDL/lib,
+					thirdparty/SDL_image/lib,
+					thirdparty/SDL_net/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
@@ -861,8 +1125,19 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					thirdparty/SDL/include,
+					thirdparty/SDL_image/include,
+					thirdparty/SDL_net/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					thirdparty/SDL/lib,
+					thirdparty/SDL_image/lib,
+					thirdparty/SDL_net/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
 			};
@@ -871,6 +1146,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A225A9F1CDDF93D009481D2 /* Build configuration list for PBXNativeTarget "PrBoom-Plus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A225A9D1CDDF93D009481D2 /* Debug */,
+				8A225A9E1CDDF93D009481D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A225AAA1CDDF947009481D2 /* Build configuration list for PBXNativeTarget "Server-Plus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A225AAB1CDDF947009481D2 /* Debug */,
+				8A225AAC1CDDF947009481D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
