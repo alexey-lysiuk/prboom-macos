@@ -1,0 +1,8 @@
+/.deploy_image
+build/
+DerivedData/
+project.xcworkspace/
+xcuserdata/
+*.mode1v3
+*.pbxuser
+*.xccheckout
