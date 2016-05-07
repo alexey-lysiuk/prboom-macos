@@ -435,6 +435,7 @@
 		8AC019CE1CDE309B00DA951B /* pls2d0.ppm */ = {isa = PBXFileReference; lastKnownFileType = file; path = pls2d0.ppm; sourceTree = "<group>"; };
 		8AC019CF1CDE309B00DA951B /* pls2e0.ppm */ = {isa = PBXFileReference; lastKnownFileType = file; path = pls2e0.ppm; sourceTree = "<group>"; };
 		8AC019D01CDE309B00DA951B /* tnt1a0.ppm */ = {isa = PBXFileReference; lastKnownFileType = file; path = tnt1a0.ppm; sourceTree = "<group>"; };
+		8AC019FF1CDE392600DA951B /* make_wad */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = make_wad; path = misc/make_wad; sourceTree = "<group>"; };
 		8AEC8A0F1CDDDCFC00ED0040 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = prboom/src/MAC/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		8AEC8A111CDDDD1D00ED0040 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = prboom/src/MAC/Info.plist; sourceTree = "<group>"; };
 		8AEC8A121CDDDD1D00ED0040 /* Launcher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Launcher.icns; path = prboom/src/MAC/Launcher.icns; sourceTree = "<group>"; };
@@ -815,6 +816,7 @@
 			children = (
 				8AC018D01CDE2DED00DA951B /* prboom */,
 				8AC018D11CDE2E0300DA951B /* rdatawad */,
+				8AC019FD1CDE38F000DA951B /* misc */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -1036,7 +1038,6 @@
 				8AEC8B561CDDDD6700ED0040 /* z_bmalloc.h */,
 				8AEC8B571CDDDD6700ED0040 /* z_zone.c */,
 				8AEC8B581CDDDD6700ED0040 /* z_zone.h */,
-				8AC0182A1CDE220900DA951B /* mus_hack.c */,
 			);
 			name = prboom;
 			sourceTree = "<group>";
@@ -1309,6 +1310,15 @@
 			path = prboom/data/sprites;
 			sourceTree = "<group>";
 		};
+		8AC019FD1CDE38F000DA951B /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				8AC019FF1CDE392600DA951B /* make_wad */,
+				8AC0182A1CDE220900DA951B /* mus_hack.c */,
+			);
+			name = misc;
+			sourceTree = "<group>";
+		};
 		8AEC8A0D1CDDDCE500ED0040 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1480,6 +1490,7 @@
 			buildPhases = (
 				8A225A931CDDF93D009481D2 /* Sources */,
 				8A225A941CDDF93D009481D2 /* Frameworks */,
+				8AC019D81CDE311700DA951B /* Build WAD */,
 			);
 			buildRules = (
 			);
@@ -1581,6 +1592,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AC019D81CDE311700DA951B /* Build WAD */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build WAD";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/misc/make_wad\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A225A931CDDF93D009481D2 /* Sources */ = {
