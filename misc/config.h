@@ -122,6 +122,9 @@ enum {false, true};
 typedef unsigned char byte;
 #endif
 
+/* Define to 1 if you have the `pcreposix' library (-lpcreposix). */
+#define HAVE_LIBPCREPOSIX 1
+
 /* Define to 1 if you have the `png' library (-lpng). */
 #define HAVE_LIBPNG 1
 

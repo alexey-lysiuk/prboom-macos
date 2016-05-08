@@ -230,6 +230,8 @@
 		8ABAEAF21CDF689B00F66D33 /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = thirdparty/vorbis/lib/libvorbis.a; sourceTree = "<group>"; };
 		8ABAEAF31CDF689B00F66D33 /* libvorbisfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbisfile.a; path = thirdparty/vorbis/lib/libvorbisfile.a; sourceTree = "<group>"; };
 		8ABAEAFD1CDF690D00F66D33 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = thirdparty/vorbis/lib/libogg.a; sourceTree = "<group>"; };
+		8ABAEB311CDF6D7400F66D33 /* copy_files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = copy_files; path = misc/copy_files; sourceTree = "<group>"; };
+		8ABAEB321CDF6D7400F66D33 /* pcreposix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pcreposix.h; path = misc/pcreposix.h; sourceTree = "<group>"; };
 		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8AC0150D1CDE16C100DA951B /* libSDL_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_image.a; path = thirdparty/SDL_image/lib/libSDL_image.a; sourceTree = "<group>"; };
 		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
@@ -1337,8 +1339,10 @@
 			isa = PBXGroup;
 			children = (
 				8A9FB6861CDF27BF0006BDE9 /* config.h */,
-				8AC019FF1CDE392600DA951B /* make_wad */,
+				8ABAEB321CDF6D7400F66D33 /* pcreposix.h */,
 				8AC0182A1CDE220900DA951B /* mus_hack.c */,
+				8ABAEB311CDF6D7400F66D33 /* copy_files */,
+				8AC019FF1CDE392600DA951B /* make_wad */,
 			);
 			name = misc;
 			sourceTree = "<group>";
