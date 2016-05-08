@@ -20,6 +20,7 @@
 		8ABAEAF51CDF68AD00F66D33 /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAF31CDF689B00F66D33 /* libvorbisfile.a */; };
 		8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAFD1CDF690D00F66D33 /* libogg.a */; };
 		8ABAEB491CDF72BD00F66D33 /* libdumb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEB481CDF72B100F66D33 /* libdumb.a */; };
+		8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEB591CDF7C1500F66D33 /* libmad.a */; };
 		8AC014751CDE127300DA951B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A8F1CDDDD6600ED0040 /* SDLMain.m */; };
 		8AC014981CDE133C00DA951B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC014971CDE133C00DA951B /* OpenGL.framework */; };
 		8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
@@ -234,6 +235,7 @@
 		8ABAEB311CDF6D7400F66D33 /* copy_files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = copy_files; path = misc/copy_files; sourceTree = "<group>"; };
 		8ABAEB321CDF6D7400F66D33 /* pcreposix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pcreposix.h; path = misc/pcreposix.h; sourceTree = "<group>"; };
 		8ABAEB481CDF72B100F66D33 /* libdumb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdumb.a; path = thirdparty/dumb/lib/libdumb.a; sourceTree = "<group>"; };
+		8ABAEB591CDF7C1500F66D33 /* libmad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmad.a; path = thirdparty/mad/lib/libmad.a; sourceTree = "<group>"; };
 		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8AC0150D1CDE16C100DA951B /* libSDL_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_image.a; path = thirdparty/SDL_image/lib/libSDL_image.a; sourceTree = "<group>"; };
 		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
@@ -769,6 +771,7 @@
 				8AC017A01CDE1D5A00DA951B /* libSDL_image.a in Frameworks */,
 				8AC017A11CDE1D5A00DA951B /* libSDL_net.a in Frameworks */,
 				8ABAEB491CDF72BD00F66D33 /* libdumb.a in Frameworks */,
+				8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */,
 				8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */,
 				8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */,
 				8ABAEAF41CDF68AD00F66D33 /* libvorbis.a in Frameworks */,
@@ -858,6 +861,7 @@
 				8AC0150D1CDE16C100DA951B /* libSDL_image.a */,
 				8A225AB51CDDFA05009481D2 /* libSDL_net.a */,
 				8ABAEB481CDF72B100F66D33 /* libdumb.a */,
+				8ABAEB591CDF7C1500F66D33 /* libmad.a */,
 				8ABAEAC91CDF620800F66D33 /* libpng16.a */,
 				8ABAEAFD1CDF690D00F66D33 /* libogg.a */,
 				8ABAEAF21CDF689B00F66D33 /* libvorbis.a */,
@@ -1966,6 +1970,7 @@
 					thirdparty/SDL_image/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
+					thirdparty/mad/include,
 					thirdparty/png/include,
 					thirdparty/vorbis/include,
 					prboom/src,
@@ -1976,6 +1981,7 @@
 					thirdparty/SDL_image/lib,
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
+					thirdparty/mad/lib,
 					thirdparty/png/lib,
 					thirdparty/vorbis/lib,
 				);
@@ -2000,6 +2006,7 @@
 					thirdparty/SDL_image/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
+					thirdparty/mad/include,
 					thirdparty/png/include,
 					thirdparty/vorbis/include,
 					prboom/src,
@@ -2010,6 +2017,7 @@
 					thirdparty/SDL_image/lib,
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
+					thirdparty/mad/lib,
 					thirdparty/png/lib,
 					thirdparty/vorbis/lib,
 				);
