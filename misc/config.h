@@ -124,3 +124,6 @@ typedef unsigned char byte;
 
 /* Define to 1 if you have the `png' library (-lpng). */
 #define HAVE_LIBPNG 1
+
+/* Define to 1 if you have the `vorbisfile' library (-lvorbisfile). */
+#define HAVE_LIBVORBISFILE 1
