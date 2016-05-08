@@ -1,5 +1,42 @@
 #!/bin/sh
 
+set -o errexit
+
+if [ -z "${SRCROOT}" ]; then
+	echo "Error: this script must be run by Xcode"
+	exit 1
+fi
+
+WAD_NAME=prboom-plus.wad
+WAD_PATH=${CONFIGURATION_BUILD_DIR}/${WAD_NAME}
+
+# Check if WAD is up-to-date
+
+if [ -e "${WAD_PATH}" ]; then
+	WAD_TIME=`stat -f %c "${WAD_PATH}"`
+fi
+
+if [ -z ${WAD_TIME} ]; then
+	NEED_BUILD=YES
+else
+	FILES=`find /Volumes/ramdisk/prboom-osx/prboom/data \( -name '*' \)`
+
+	for FILE in ${FILES[@]}; do
+		FILE_TIME=`stat -f %c "${FILE}"`
+	
+		if [ ${FILE_TIME} -gt ${WAD_TIME} ]; then
+			NEED_BUILD=YES
+			break
+		fi
+	done
+fi
+
+if [ -z ${NEED_BUILD} ]; then
+	exit
+fi
+
+# Build WAD
+
 PALETTE=(
 	palette.rgb
 )
@@ -232,7 +269,7 @@ WAD_CMDLINE=(
 	-graphics ${GRAPHICS[*]}
 	-marker FF_START -flats ${FLATS[*]} -marker FF_END
 	-marker SS_START -sprites ${SPRITES[*]} -marker SS_END
-	-o "${CONFIGURATION_BUILD_DIR}/prboom-plus.wad"
+	-o "${WAD_PATH}"
 )
 
 "${CONFIGURATION_BUILD_DIR}/rdatawad" ${WAD_CMDLINE[*]}
