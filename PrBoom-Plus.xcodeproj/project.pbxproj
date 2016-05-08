@@ -207,7 +207,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8AC018E31CDE2E3700DA951B /* rdatawad */;
+			remoteGlobalIDString = 8AC018E31CDE2E3700DA951B;
 			remoteInfo = rdatawad;
 		};
 /* End PBXContainerItemProxy section */
@@ -218,6 +218,7 @@
 		8A225AA41CDDF947009481D2 /* Server-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Server-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A225AB41CDDF9FB009481D2 /* libSDL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL.a; path = thirdparty/SDL/lib/libSDL.a; sourceTree = "<group>"; };
 		8A225AB51CDDFA05009481D2 /* libSDL_net.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_net.a; path = thirdparty/SDL_net/lib/libSDL_net.a; sourceTree = "<group>"; };
+		8A9FB6861CDF27BF0006BDE9 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = misc/config.h; sourceTree = "<group>"; };
 		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8AC0150D1CDE16C100DA951B /* libSDL_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_image.a; path = thirdparty/SDL_image/lib/libSDL_image.a; sourceTree = "<group>"; };
 		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
@@ -1313,6 +1314,7 @@
 		8AC019FD1CDE38F000DA951B /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				8A9FB6861CDF27BF0006BDE9 /* config.h */,
 				8AC019FF1CDE392600DA951B /* make_wad */,
 				8AC0182A1CDE220900DA951B /* mus_hack.c */,
 			);
@@ -1559,6 +1561,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PrBoom-Plus" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -1919,7 +1923,7 @@
 					thirdparty/SDL_image/include,
 					thirdparty/SDL_net/include,
 					prboom/src,
-					prboom/src/MAC,
+					misc,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					thirdparty/SDL/lib,
@@ -1928,6 +1932,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -1946,7 +1951,7 @@
 					thirdparty/SDL_image/include,
 					thirdparty/SDL_net/include,
 					prboom/src,
-					prboom/src/MAC,
+					misc,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					thirdparty/SDL/lib,
@@ -1954,6 +1959,7 @@
 					thirdparty/SDL_net/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
