@@ -1543,6 +1543,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8A9FB6961CDF31450006BDE9 /* Copy Required Files */,
 			);
 			buildRules = (
 			);
@@ -1598,6 +1599,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8A9FB6961CDF31450006BDE9 /* Copy Required Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Required Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/misc/copy_files\"";
+		};
 		8AC019D81CDE311700DA951B /* Build WAD */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

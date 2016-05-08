@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -o errexit
+
+if [ -z "${SRCROOT}" ]; then
+	echo "Error: this script must be run by Xcode"
+	exit 1
+fi
+
+WAD_NAME=PrBoom-Plus.wad
+
+FILES=(
+	PrBoom-Plus
+	Server-Plus
+	${WAD_NAME}
+)
+
+cd "${CONFIGURATION_BUILD_DIR}"
+rsync -av ${FILES[*]} ${EXECUTABLE_FOLDER_PATH}
+
+RES_WAD_PATH=${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${WAD_NAME}
+
+if [ ! -e ${RES_WAD_PATH} ]; then
+	ln -s ../MacOS/${WAD_NAME} ${RES_WAD_PATH}
+fi
