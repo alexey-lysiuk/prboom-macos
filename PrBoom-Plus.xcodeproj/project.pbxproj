@@ -1972,6 +1972,7 @@
 					thirdparty/dumb/include,
 					thirdparty/mad/include,
 					thirdparty/png/include,
+					thirdparty/portmidi/include,
 					thirdparty/vorbis/include,
 					prboom/src,
 					misc,
@@ -1983,6 +1984,7 @@
 					thirdparty/dumb/lib,
 					thirdparty/mad/lib,
 					thirdparty/png/lib,
+					thirdparty/portmidi/lib,
 					thirdparty/vorbis/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
@@ -2008,6 +2010,7 @@
 					thirdparty/dumb/include,
 					thirdparty/mad/include,
 					thirdparty/png/include,
+					thirdparty/portmidi/include,
 					thirdparty/vorbis/include,
 					prboom/src,
 					misc,
@@ -2019,6 +2022,7 @@
 					thirdparty/dumb/lib,
 					thirdparty/mad/lib,
 					thirdparty/png/lib,
+					thirdparty/portmidi/lib,
 					thirdparty/vorbis/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
