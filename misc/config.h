@@ -137,5 +137,8 @@ typedef unsigned char byte;
 /* Define to 1 if you have the `portmidi' library (-lportmidi). */
 #define HAVE_LIBPORTMIDI 1
 
+/* Define to 1 if you have the `SDL_mixer' library (-lSDL_mixer). */
+#define HAVE_LIBSDL_MIXER 1
+
 /* Define to 1 if you have the `vorbisfile' library (-lvorbisfile). */
 #define HAVE_LIBVORBISFILE 1

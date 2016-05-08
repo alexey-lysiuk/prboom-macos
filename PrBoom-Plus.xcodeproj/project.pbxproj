@@ -21,6 +21,11 @@
 		8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAFD1CDF690D00F66D33 /* libogg.a */; };
 		8ABAEB491CDF72BD00F66D33 /* libdumb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEB481CDF72B100F66D33 /* libdumb.a */; };
 		8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEB591CDF7C1500F66D33 /* libmad.a */; };
+		8ABAEC5D1CDF8E0500F66D33 /* libSDL_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC5C1CDF8DEF00F66D33 /* libSDL_mixer.a */; };
+		8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */; };
+		8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */; };
+		8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */; };
+		8ABAEC7C1CDF8FA200F66D33 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC7B1CDF8FA200F66D33 /* AudioToolbox.framework */; };
 		8AC014751CDE127300DA951B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A8F1CDDDD6600ED0040 /* SDLMain.m */; };
 		8AC014981CDE133C00DA951B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC014971CDE133C00DA951B /* OpenGL.framework */; };
 		8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
@@ -174,7 +179,7 @@
 		8AC017A11CDE1D5A00DA951B /* libSDL_net.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A225AB51CDDFA05009481D2 /* libSDL_net.a */; };
 		8AC017B01CDE1E1500DA951B /* i_pcsound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A5A1CDDDD6600ED0040 /* i_pcsound.c */; };
 		8AC017B71CDE1E5F00DA951B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC017B61CDE1E5F00DA951B /* QTKit.framework */; };
-		8AC0182B1CDE222300DA951B /* mus_hack.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0182A1CDE220900DA951B /* mus_hack.c */; };
+		8AC0182B1CDE222300DA951B /* mus_hack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0182A1CDE220900DA951B /* mus_hack.cpp */; };
 		8AC018E91CDE2E4400DA951B /* rd_graphic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC018D61CDE2E2E00DA951B /* rd_graphic.c */; };
 		8AC018EA1CDE2E4400DA951B /* rd_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC018D81CDE2E2E00DA951B /* rd_main.c */; };
 		8AC018EB1CDE2E4400DA951B /* rd_output.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC018D91CDE2E2E00DA951B /* rd_output.c */; };
@@ -236,13 +241,18 @@
 		8ABAEB321CDF6D7400F66D33 /* pcreposix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pcreposix.h; path = misc/pcreposix.h; sourceTree = "<group>"; };
 		8ABAEB481CDF72B100F66D33 /* libdumb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdumb.a; path = thirdparty/dumb/lib/libdumb.a; sourceTree = "<group>"; };
 		8ABAEB591CDF7C1500F66D33 /* libmad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmad.a; path = thirdparty/mad/lib/libmad.a; sourceTree = "<group>"; };
+		8ABAEC5C1CDF8DEF00F66D33 /* libSDL_mixer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_mixer.a; path = thirdparty/SDL_mixer/lib/libSDL_mixer.a; sourceTree = "<group>"; };
+		8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFLAC.a; path = thirdparty/flac/lib/libFLAC.a; sourceTree = "<group>"; };
+		8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmikmod.a; path = thirdparty/mikmod/lib/libmikmod.a; sourceTree = "<group>"; };
+		8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsmpeg.a; path = thirdparty/smpeg/lib/libsmpeg.a; sourceTree = "<group>"; };
+		8ABAEC7B1CDF8FA200F66D33 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8AC0150D1CDE16C100DA951B /* libSDL_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_image.a; path = thirdparty/SDL_image/lib/libSDL_image.a; sourceTree = "<group>"; };
 		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		8AC015311CDE172E00DA951B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		8AC015F21CDE174C00DA951B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		8AC017B61CDE1E5F00DA951B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
-		8AC0182A1CDE220900DA951B /* mus_hack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mus_hack.c; path = misc/mus_hack.c; sourceTree = "<group>"; };
+		8AC0182A1CDE220900DA951B /* mus_hack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mus_hack.cpp; path = misc/mus_hack.cpp; sourceTree = "<group>"; };
 		8AC018D61CDE2E2E00DA951B /* rd_graphic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rd_graphic.c; path = prboom/data/rd_graphic.c; sourceTree = "<group>"; };
 		8AC018D71CDE2E2E00DA951B /* rd_graphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rd_graphic.h; path = prboom/data/rd_graphic.h; sourceTree = "<group>"; };
 		8AC018D81CDE2E2E00DA951B /* rd_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rd_main.c; path = prboom/data/rd_main.c; sourceTree = "<group>"; };
@@ -760,6 +770,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ABAEC7C1CDF8FA200F66D33 /* AudioToolbox.framework in Frameworks */,
 				8AC0179A1CDE1D5A00DA951B /* AudioUnit.framework in Frameworks */,
 				8AC0179B1CDE1D5A00DA951B /* Carbon.framework in Frameworks */,
 				8AC0179C1CDE1D5A00DA951B /* Cocoa.framework in Frameworks */,
@@ -767,13 +778,17 @@
 				8AC0179E1CDE1D5A00DA951B /* OpenGL.framework in Frameworks */,
 				8AC017B71CDE1E5F00DA951B /* QTKit.framework in Frameworks */,
 				8ABAEAD31CDF628C00F66D33 /* libz.dylib in Frameworks */,
+				8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */,
 				8AC0179F1CDE1D5A00DA951B /* libSDL.a in Frameworks */,
 				8AC017A01CDE1D5A00DA951B /* libSDL_image.a in Frameworks */,
+				8ABAEC5D1CDF8E0500F66D33 /* libSDL_mixer.a in Frameworks */,
 				8AC017A11CDE1D5A00DA951B /* libSDL_net.a in Frameworks */,
 				8ABAEB491CDF72BD00F66D33 /* libdumb.a in Frameworks */,
 				8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */,
-				8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */,
+				8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */,
 				8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */,
+				8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */,
+				8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */,
 				8ABAEAF41CDF68AD00F66D33 /* libvorbis.a in Frameworks */,
 				8ABAEAF51CDF68AD00F66D33 /* libvorbisfile.a in Frameworks */,
 			);
@@ -850,6 +865,7 @@
 		29B97323FDCFA39411CA2CEA /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				8ABAEC7B1CDF8FA200F66D33 /* AudioToolbox.framework */,
 				8AC0151B1CDE170F00DA951B /* AudioUnit.framework */,
 				8AC015311CDE172E00DA951B /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -857,13 +873,17 @@
 				8AC014971CDE133C00DA951B /* OpenGL.framework */,
 				8AC017B61CDE1E5F00DA951B /* QTKit.framework */,
 				8ABAEAD11CDF627900F66D33 /* libz.dylib */,
+				8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */,
 				8A225AB41CDDF9FB009481D2 /* libSDL.a */,
 				8AC0150D1CDE16C100DA951B /* libSDL_image.a */,
+				8ABAEC5C1CDF8DEF00F66D33 /* libSDL_mixer.a */,
 				8A225AB51CDDFA05009481D2 /* libSDL_net.a */,
 				8ABAEB481CDF72B100F66D33 /* libdumb.a */,
 				8ABAEB591CDF7C1500F66D33 /* libmad.a */,
-				8ABAEAC91CDF620800F66D33 /* libpng16.a */,
+				8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */,
 				8ABAEAFD1CDF690D00F66D33 /* libogg.a */,
+				8ABAEAC91CDF620800F66D33 /* libpng16.a */,
+				8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */,
 				8ABAEAF21CDF689B00F66D33 /* libvorbis.a */,
 				8ABAEAF31CDF689B00F66D33 /* libvorbisfile.a */,
 			);
@@ -1348,7 +1368,7 @@
 			children = (
 				8A9FB6861CDF27BF0006BDE9 /* config.h */,
 				8ABAEB321CDF6D7400F66D33 /* pcreposix.h */,
-				8AC0182A1CDE220900DA951B /* mus_hack.c */,
+				8AC0182A1CDE220900DA951B /* mus_hack.cpp */,
 				8ABAEB311CDF6D7400F66D33 /* copy_files */,
 				8AC019FF1CDE392600DA951B /* make_wad */,
 			);
@@ -1802,7 +1822,7 @@
 				8AC017811CDE1CDD00DA951B /* wi_stuff.c in Sources */,
 				8AC017821CDE1CDD00DA951B /* z_bmalloc.c in Sources */,
 				8AC017831CDE1CDD00DA951B /* z_zone.c in Sources */,
-				8AC0182B1CDE222300DA951B /* mus_hack.c in Sources */,
+				8AC0182B1CDE222300DA951B /* mus_hack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1968,6 +1988,7 @@
 				HEADER_SEARCH_PATHS = (
 					thirdparty/SDL/include,
 					thirdparty/SDL_image/include,
+					thirdparty/SDL_mixer/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
 					thirdparty/mad/include,
@@ -1980,11 +2001,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					thirdparty/SDL/lib,
 					thirdparty/SDL_image/lib,
+					thirdparty/SDL_mixer/lib,
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
+					thirdparty/flac/lib,
 					thirdparty/mad/lib,
+					thirdparty/mikmod/lib,
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
+					thirdparty/smpeg/lib,
 					thirdparty/vorbis/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
@@ -2006,6 +2031,7 @@
 				HEADER_SEARCH_PATHS = (
 					thirdparty/SDL/include,
 					thirdparty/SDL_image/include,
+					thirdparty/SDL_mixer/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
 					thirdparty/mad/include,
@@ -2018,11 +2044,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					thirdparty/SDL/lib,
 					thirdparty/SDL_image/lib,
+					thirdparty/SDL_mixer/lib,
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
+					thirdparty/flac/lib,
 					thirdparty/mad/lib,
+					thirdparty/mikmod/lib,
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
+					thirdparty/smpeg/lib,
 					thirdparty/vorbis/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
