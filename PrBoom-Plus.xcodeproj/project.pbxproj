@@ -45,7 +45,6 @@
 		8AC015361CDE173400DA951B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015311CDE172E00DA951B /* Carbon.framework */; };
 		8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015F21CDE174C00DA951B /* IOKit.framework */; };
 		8AC016A41CDE175900DA951B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015F21CDE174C00DA951B /* IOKit.framework */; };
-		8AC016DF1CDE1B8000DA951B /* i_sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A7E1CDDDD6600ED0040 /* i_sound.m */; };
 		8AC016E01CDE1B8100DA951B /* i_system.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A7F1CDDDD6600ED0040 /* i_system.m */; };
 		8AC016E11CDE1B8400DA951B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A8F1CDDDD6600ED0040 /* SDLMain.m */; };
 		8AC016E21CDE1B8C00DA951B /* pcsound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADC1CDDDD6600ED0040 /* pcsound.c */; };
@@ -1721,7 +1720,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC016DF1CDE1B8000DA951B /* i_sound.m in Sources */,
 				8AC016E01CDE1B8100DA951B /* i_system.m in Sources */,
 				8AC016E11CDE1B8400DA951B /* SDLMain.m in Sources */,
 				8AC0171B1CDE1C5D00DA951B /* dbopl.c in Sources */,
