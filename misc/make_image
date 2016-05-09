@@ -1,0 +1,41 @@
+#!/bin/sh
+
+set -o errexit
+
+if [ -z "${SRCROOT}" ]; then
+	echo "Error: this script must be run by Xcode"
+	exit 1
+fi
+
+IMAGE_DIR=.deploy_image
+
+cd "${SRCROOT}"
+
+if [ -e "${IMAGE_DIR}" ]; then
+	rm -r "${IMAGE_DIR}"
+fi
+
+mkdir -p "${IMAGE_DIR}"
+cp -R "${CONFIGURATION_BUILD_DIR}/Launcher.app" "${IMAGE_DIR}/PrBoom-Plus.app"
+
+# TODO: set version in .plist
+# TODO: strip executable
+
+cd prboom
+cp -R doc AUTHORS COPYING NEWS README "../${IMAGE_DIR}"
+cd ..
+
+# TODO: get version from config.h
+IMAGE_NAME=PrBoom-Plus-2.5.1.4
+
+HDIUTIL_ARGS=(
+	create
+	-srcfolder "${IMAGE_DIR}"
+	-volname "${IMAGE_NAME}"
+	-format UDBZ
+	-fs HFS+
+	-ov
+	"${IMAGE_NAME}.dmg"
+)
+
+hdiutil ${HDIUTIL_ARGS[*]}

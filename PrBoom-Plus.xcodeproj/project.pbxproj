@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8A7412AD1CE0831900A52F12 /* Make Image */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8A7412B21CE0836D00A52F12 /* Build configuration list for PBXAggregateTarget "Make Image" */;
+			buildPhases = (
+				8A7412AC1CE0831900A52F12 /* Make Image */,
+			);
+			dependencies = (
+				8A7412B11CE0834600A52F12 /* PBXTargetDependency */,
+			);
+			name = "Make Image";
+			productName = "Make Image";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8A225AB11CDDF987009481D2 /* i_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8AE21CDDDD6600ED0040 /* i_system.c */; };
 		8A225AB21CDDF98A009481D2 /* i_network.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8B0F1CDDDD6700ED0040 /* i_network.c */; };
@@ -228,6 +243,13 @@
 			remoteGlobalIDString = 8A225AA31CDDF947009481D2;
 			remoteInfo = "Server-Plus";
 		};
+		8A7412B01CE0834600A52F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Launcher;
+		};
 		8AC018F31CDE2E5F00DA951B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -250,6 +272,7 @@
 		8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
 		8A7411C41CE06F9000A52F12 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		8A7412411CE072A200A52F12 /* libportmidi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libportmidi.a; path = thirdparty/portmidi/lib/libportmidi.a; sourceTree = "<group>"; };
+		8A7412AB1CE082ED00A52F12 /* make_image */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = make_image; path = misc/make_image; sourceTree = "<group>"; };
 		8A9FB6861CDF27BF0006BDE9 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = misc/config.h; sourceTree = "<group>"; };
 		8ABAEAC91CDF620800F66D33 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = thirdparty/png/lib/libpng16.a; sourceTree = "<group>"; };
 		8ABAEAD11CDF627900F66D33 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
@@ -1406,6 +1429,7 @@
 				8ABAEB321CDF6D7400F66D33 /* pcreposix.h */,
 				8AC0182A1CDE220900DA951B /* mus_hack.cpp */,
 				8ABAEB311CDF6D7400F66D33 /* copy_files */,
+				8A7412AB1CE082ED00A52F12 /* make_image */,
 				8AC019FF1CDE392600DA951B /* make_wad */,
 			);
 			name = misc;
@@ -1670,6 +1694,7 @@
 				8A225A961CDDF93D009481D2 /* PrBoom-Plus */,
 				8A225AA31CDDF947009481D2 /* Server-Plus */,
 				8AC018E31CDE2E3700DA951B /* rdatawad */,
+				8A7412AD1CE0831900A52F12 /* Make Image */,
 			);
 		};
 /* End PBXProject section */
@@ -1689,6 +1714,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8A7412AC1CE0831900A52F12 /* Make Image */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make Image";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/misc/make_image\"";
+		};
 		8A9FB6961CDF31450006BDE9 /* Copy Required Files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1918,6 +1957,11 @@
 			target = 8A225AA31CDDF947009481D2 /* Server-Plus */;
 			targetProxy = 8A225AAF1CDDF96F009481D2 /* PBXContainerItemProxy */;
 		};
+		8A7412B11CE0834600A52F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Launcher */;
+			targetProxy = 8A7412B01CE0834600A52F12 /* PBXContainerItemProxy */;
+		};
 		8AC018F41CDE2E5F00DA951B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AC018E31CDE2E3700DA951B /* rdatawad */;
@@ -2043,6 +2087,20 @@
 			};
 			name = Release;
 		};
+		8A7412AE1CE0831900A52F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Make Image";
+			};
+			name = Debug;
+		};
+		8A7412AF1CE0831900A52F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Make Image";
+			};
+			name = Release;
+		};
 		8AC018E61CDE2E3700DA951B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2125,6 +2183,15 @@
 			buildConfigurations = (
 				8A225AAB1CDDF947009481D2 /* Debug */,
 				8A225AAC1CDDF947009481D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7412B21CE0836D00A52F12 /* Build configuration list for PBXAggregateTarget "Make Image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7412AE1CE0831900A52F12 /* Debug */,
+				8A7412AF1CE0831900A52F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
