@@ -24,6 +24,8 @@
 		8A7411E91CE06FC500A52F12 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411C41CE06F9000A52F12 /* CoreAudio.framework */; };
 		8A7412331CE0720B00A52F12 /* portmidiplayer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8AB41CDDDD6600ED0040 /* portmidiplayer.c */; };
 		8A7412421CE072BA00A52F12 /* libportmidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7412411CE072A200A52F12 /* libportmidi.a */; };
+		8A7412A31CE07ECA00A52F12 /* Launcher.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A121CDDDD1D00ED0040 /* Launcher.icns */; };
+		8A7412A41CE07ECD00A52F12 /* PrBoom.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A141CDDDD1D00ED0040 /* PrBoom.sdef */; };
 		8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAC91CDF620800F66D33 /* libpng16.a */; };
 		8ABAEAD21CDF627900F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
 		8ABAEAD31CDF628C00F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
@@ -1678,7 +1680,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AEC8A101CDDDCFC00ED0040 /* MainMenu.nib in Resources */,
+				8A7412A31CE07ECA00A52F12 /* Launcher.icns in Resources */,
 				8AEC8B6A1CDDDE3600ED0040 /* PrBoom.icns in Resources */,
+				8A7412A41CE07ECD00A52F12 /* PrBoom.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
