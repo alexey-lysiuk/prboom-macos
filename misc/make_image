@@ -15,27 +15,35 @@ if [ -e "${IMAGE_DIR}" ]; then
 	rm -r "${IMAGE_DIR}"
 fi
 
-mkdir -p "${IMAGE_DIR}"
-cp -R "${CONFIGURATION_BUILD_DIR}/Launcher.app" "${IMAGE_DIR}/PrBoom-Plus.app"
+function extract_variable {
+	grep "#define $1 \"[^\"]*\"" misc/config.h | cut -d\" -f2
+}
 
-# TODO: set version in .plist
+PACKAGE_VERSION=$(extract_variable PACKAGE_VERSION)
+PACKAGE_NAME=$(extract_variable PACKAGE_NAME)
+VOLUME_NAME=${PACKAGE_NAME}-${PACKAGE_VERSION}
+BUNDLE_PATH=${IMAGE_DIR}/${PACKAGE_NAME}.app
+PLIST_PATH=${IMAGE_DIR}/${PACKAGE_NAME}.app/Contents/Info.plist
+
+mkdir -p "${IMAGE_DIR}"
+cp -R "${CONFIGURATION_BUILD_DIR}/Launcher.app" "${BUNDLE_PATH}"
+rm "${PLIST_PATH}"
+sed "s/%VERSION%/${PACKAGE_VERSION}/g" prboom/src/MAC/Info.plist > "${PLIST_PATH}"
+
 # TODO: strip executable
 
 cd prboom
 cp -R doc AUTHORS COPYING NEWS README "../${IMAGE_DIR}"
 cd ..
 
-# TODO: get version from config.h
-IMAGE_NAME=PrBoom-Plus-2.5.1.4
-
 HDIUTIL_ARGS=(
 	create
 	-srcfolder "${IMAGE_DIR}"
-	-volname "${IMAGE_NAME}"
+	-volname "${VOLUME_NAME}"
 	-format UDBZ
 	-fs HFS+
 	-ov
-	"${IMAGE_NAME}.dmg"
+	"${VOLUME_NAME}"
 )
 
 hdiutil ${HDIUTIL_ARGS[*]}
