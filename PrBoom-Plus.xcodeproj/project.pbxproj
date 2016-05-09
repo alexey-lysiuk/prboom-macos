@@ -13,6 +13,15 @@
 		8A225AB61CDDFA14009481D2 /* libSDL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A225AB41CDDF9FB009481D2 /* libSDL.a */; };
 		8A225AB71CDDFA16009481D2 /* libSDL_net.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A225AB51CDDFA05009481D2 /* libSDL_net.a */; };
 		8A225AB81CDDFADE009481D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8A7411AD1CE06F1F00A52F12 /* libfluidsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AA1CE06EE800A52F12 /* libfluidsynth.a */; };
+		8A7411AE1CE06F1F00A52F12 /* libglib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AB1CE06EE800A52F12 /* libglib.a */; };
+		8A7411AF1CE06F1F00A52F12 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AC1CE06EE800A52F12 /* libintl.a */; };
+		8A7411B31CE06F4700A52F12 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B21CE06F4700A52F12 /* libiconv.dylib */; };
+		8A7411B41CE06F5800A52F12 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B21CE06F4700A52F12 /* libiconv.dylib */; };
+		8A7411B81CE06F7000A52F12 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */; };
+		8A7411C11CE06F8100A52F12 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */; };
+		8A7411C51CE06F9000A52F12 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411C41CE06F9000A52F12 /* CoreAudio.framework */; };
+		8A7411E91CE06FC500A52F12 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411C41CE06F9000A52F12 /* CoreAudio.framework */; };
 		8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAC91CDF620800F66D33 /* libpng16.a */; };
 		8ABAEAD21CDF627900F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
 		8ABAEAD31CDF628C00F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
@@ -231,6 +240,12 @@
 		8A225AA41CDDF947009481D2 /* Server-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Server-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A225AB41CDDF9FB009481D2 /* libSDL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL.a; path = thirdparty/SDL/lib/libSDL.a; sourceTree = "<group>"; };
 		8A225AB51CDDFA05009481D2 /* libSDL_net.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL_net.a; path = thirdparty/SDL_net/lib/libSDL_net.a; sourceTree = "<group>"; };
+		8A7411AA1CE06EE800A52F12 /* libfluidsynth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfluidsynth.a; path = thirdparty/fluidsynth/lib/libfluidsynth.a; sourceTree = "<group>"; };
+		8A7411AB1CE06EE800A52F12 /* libglib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglib.a; path = thirdparty/fluidsynth/lib/libglib.a; sourceTree = "<group>"; };
+		8A7411AC1CE06EE800A52F12 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = thirdparty/fluidsynth/lib/libintl.a; sourceTree = "<group>"; };
+		8A7411B21CE06F4700A52F12 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = /usr/lib/libiconv.dylib; sourceTree = "<absolute>"; };
+		8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
+		8A7411C41CE06F9000A52F12 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		8A9FB6861CDF27BF0006BDE9 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = misc/config.h; sourceTree = "<group>"; };
 		8ABAEAC91CDF620800F66D33 /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng16.a; path = thirdparty/png/lib/libpng16.a; sourceTree = "<group>"; };
 		8ABAEAD11CDF627900F66D33 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
@@ -774,9 +789,12 @@
 				8AC0179A1CDE1D5A00DA951B /* AudioUnit.framework in Frameworks */,
 				8AC0179B1CDE1D5A00DA951B /* Carbon.framework in Frameworks */,
 				8AC0179C1CDE1D5A00DA951B /* Cocoa.framework in Frameworks */,
+				8A7411E91CE06FC500A52F12 /* CoreAudio.framework in Frameworks */,
+				8A7411C11CE06F8100A52F12 /* CoreMIDI.framework in Frameworks */,
 				8AC0179D1CDE1D5A00DA951B /* IOKit.framework in Frameworks */,
 				8AC0179E1CDE1D5A00DA951B /* OpenGL.framework in Frameworks */,
 				8AC017B71CDE1E5F00DA951B /* QTKit.framework in Frameworks */,
+				8A7411B41CE06F5800A52F12 /* libiconv.dylib in Frameworks */,
 				8ABAEAD31CDF628C00F66D33 /* libz.dylib in Frameworks */,
 				8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */,
 				8AC0179F1CDE1D5A00DA951B /* libSDL.a in Frameworks */,
@@ -784,6 +802,9 @@
 				8ABAEC5D1CDF8E0500F66D33 /* libSDL_mixer.a in Frameworks */,
 				8AC017A11CDE1D5A00DA951B /* libSDL_net.a in Frameworks */,
 				8ABAEB491CDF72BD00F66D33 /* libdumb.a in Frameworks */,
+				8A7411AD1CE06F1F00A52F12 /* libfluidsynth.a in Frameworks */,
+				8A7411AE1CE06F1F00A52F12 /* libglib.a in Frameworks */,
+				8A7411AF1CE06F1F00A52F12 /* libintl.a in Frameworks */,
 				8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */,
 				8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */,
 				8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */,
@@ -824,6 +845,9 @@
 				8AC015321CDE172E00DA951B /* Carbon.framework in Frameworks */,
 				8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */,
 				8ABAEAD21CDF627900F66D33 /* libz.dylib in Frameworks */,
+				8A7411B31CE06F4700A52F12 /* libiconv.dylib in Frameworks */,
+				8A7411B81CE06F7000A52F12 /* CoreMIDI.framework in Frameworks */,
+				8A7411C51CE06F9000A52F12 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,9 +893,12 @@
 				8AC0151B1CDE170F00DA951B /* AudioUnit.framework */,
 				8AC015311CDE172E00DA951B /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				8A7411C41CE06F9000A52F12 /* CoreAudio.framework */,
+				8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */,
 				8AC015F21CDE174C00DA951B /* IOKit.framework */,
 				8AC014971CDE133C00DA951B /* OpenGL.framework */,
 				8AC017B61CDE1E5F00DA951B /* QTKit.framework */,
+				8A7411B21CE06F4700A52F12 /* libiconv.dylib */,
 				8ABAEAD11CDF627900F66D33 /* libz.dylib */,
 				8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */,
 				8A225AB41CDDF9FB009481D2 /* libSDL.a */,
@@ -879,6 +906,9 @@
 				8ABAEC5C1CDF8DEF00F66D33 /* libSDL_mixer.a */,
 				8A225AB51CDDFA05009481D2 /* libSDL_net.a */,
 				8ABAEB481CDF72B100F66D33 /* libdumb.a */,
+				8A7411AA1CE06EE800A52F12 /* libfluidsynth.a */,
+				8A7411AB1CE06EE800A52F12 /* libglib.a */,
+				8A7411AC1CE06EE800A52F12 /* libintl.a */,
 				8ABAEB591CDF7C1500F66D33 /* libmad.a */,
 				8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */,
 				8ABAEAFD1CDF690D00F66D33 /* libogg.a */,
@@ -1908,6 +1938,7 @@
 					thirdparty/SDL_mixer/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
+					thirdparty/fluidsynth/include,
 					thirdparty/mad/include,
 					thirdparty/png/include,
 					thirdparty/portmidi/include,
@@ -1922,6 +1953,7 @@
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
 					thirdparty/flac/lib,
+					thirdparty/fluidsynth/lib,
 					thirdparty/mad/lib,
 					thirdparty/mikmod/lib,
 					thirdparty/png/lib,
@@ -1942,6 +1974,7 @@
 					thirdparty/SDL_mixer/include,
 					thirdparty/SDL_net/include,
 					thirdparty/dumb/include,
+					thirdparty/fluidsynth/include,
 					thirdparty/mad/include,
 					thirdparty/png/include,
 					thirdparty/portmidi/include,
@@ -1956,6 +1989,7 @@
 					thirdparty/SDL_net/lib,
 					thirdparty/dumb/lib,
 					thirdparty/flac/lib,
+					thirdparty/fluidsynth/lib,
 					thirdparty/mad/lib,
 					thirdparty/mikmod/lib,
 					thirdparty/png/lib,

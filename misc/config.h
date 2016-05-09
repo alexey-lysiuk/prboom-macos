@@ -125,6 +125,9 @@ typedef unsigned char byte;
 /* Define to 1 if you have the `dumb' library (-ldumb). */
 #define HAVE_LIBDUMB 1
 
+/* Define to 1 if you have the `fluidsynth' library (-lfluidsynth). */
+#define HAVE_LIBFLUIDSYNTH 1
+
 /* Define to 1 if you have the `mad' library (-lmad). */
 #define HAVE_LIBMAD 1
 
