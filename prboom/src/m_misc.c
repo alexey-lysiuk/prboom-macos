@@ -80,7 +80,6 @@
 #include "gl_struct.h"
 #endif
 #include "g_overflow.h"
-#include "r_screenmultiply.h"
 #include "e6y.h"
 #ifdef USE_WINDOWS_LAUNCHER
 #include "e6y_launcher.h"
@@ -239,7 +238,6 @@ default_t defaults[] =
   //e6y
   {"System settings",{NULL},{0},UL,UL,def_none,ss_none},
   {"process_priority", {&process_priority},{0},0,2,def_int,ss_none},
-  {"try_to_reduce_cpu_cache_misses", {&try_to_reduce_cpu_cache_misses},{1},0,1,def_bool,ss_none},
   
   {"Misc settings",{NULL},{0},UL,UL,def_none,ss_none},
   {"default_compatibility_level",{(int*)&default_compatibility_level},
@@ -357,9 +355,7 @@ default_t defaults[] =
   {"comp_translucency",{&default_comp[comp_translucency]},{0},0,1,def_bool,ss_comp,&comp[comp_translucency]},
 
   {"Sound settings",{NULL},{0},UL,UL,def_none,ss_none},
-//#ifdef HAVE_LIBSDL_MIXER
   {"snd_pcspeaker",{&snd_pcspeaker},{0}, 0, 1, def_bool,ss_none},
-//#endif
   {"sound_card",{&snd_card},{-1},-1,7,       // jff 1/18/98 allow Allegro drivers
    def_int,ss_none}, // select sounds driver (DOS), -1 is autodetect, 0 is none; in Linux, non-zero enables sound
   {"music_card",{&mus_card},{-1},-1,9,       //  to be set,  -1 = autodetect
@@ -397,7 +393,6 @@ default_t defaults[] =
   #else
     {"videomode",{NULL, &default_videomode},{0,"8"},UL,UL,def_str,ss_none},
   #endif
-  {"use_gl_surface",{&use_gl_surface},{0},0,1,def_bool,ss_none},
 #else
   {"videomode",{NULL, &default_videomode},{0,"8"},UL,UL,def_str,ss_none},
 #endif
@@ -405,10 +400,8 @@ default_t defaults[] =
   {"screen_resolution",{NULL, &screen_resolution},{0,"640x480"},UL,UL,def_str,ss_none},
   {"use_fullscreen",{&use_fullscreen},{0},0,1, /* proff 21/05/2000 */
    def_bool,ss_none},
-#ifndef DISABLE_DOUBLEBUFFER
-  {"use_doublebuffer",{&use_doublebuffer},{1},0,1,             // proff 2001-7-4
-   def_bool,ss_none}, // enable doublebuffer to avoid display tearing (fullscreen)
-#endif
+  {"render_vsync",{&render_vsync},{1},0,1,
+   def_bool,ss_none},
   {"translucency",{&default_translucency},{1},0,1,   // phares
    def_bool,ss_none}, // enables translucency
   {"tran_filter_pct",{&tran_filter_pct},{66},0,100,         // killough 2/21/98
@@ -468,8 +461,6 @@ default_t defaults[] =
   {"gl_use_display_lists",{&gl_use_display_lists},{0},0,1,
    def_bool,ss_none},
 
-  {"gl_vsync",{&gl_vsync},{1},0,1,
-   def_bool,ss_none},
   {"gl_finish",{&gl_finish},{1},0,1,
    def_bool,ss_none},
   {"gl_clear",{&gl_clear},{0},0,1,
@@ -483,11 +474,11 @@ default_t defaults[] =
   {"gl_depthbuffer_bits",{&gl_depthbuffer_bits},{24},16,32,
    def_int,ss_none},
   {"gl_texture_filter",{(int*)&gl_texture_filter},
-   {filter_linear_mipmap_linear}, filter_nearest, filter_count - 1, def_int,ss_none},
+   {filter_nearest_mipmap_linear}, filter_nearest, filter_count - 1, def_int,ss_none},
   {"gl_sprite_filter",{(int*)&gl_sprite_filter},
-   {filter_linear}, filter_nearest, filter_linear_mipmap_nearest, def_int,ss_none},
+   {filter_nearest}, filter_nearest, filter_linear_mipmap_nearest, def_int,ss_none},
   {"gl_patch_filter",{(int*)&gl_patch_filter},
-   {filter_linear}, filter_nearest, filter_linear, def_int,ss_none},
+   {filter_nearest}, filter_nearest, filter_linear, def_int,ss_none},
   {"gl_texture_filter_anisotropic",{(int*)&gl_texture_filter_anisotropic},
    {gl_anisotropic_8x}, gl_anisotropic_off, gl_anisotropic_16x, def_int,ss_none},
   {"gl_tex_format_string", {NULL,&gl_tex_format_string}, {0,"GL_RGBA"},UL,UL,
@@ -980,15 +971,14 @@ default_t defaults[] =
   // NSM
   {"Video capture encoding settings",{NULL},{0},UL,UL,def_none,ss_none},
   {"cap_soundcommand",{NULL, &cap_soundcommand},{0,"oggenc2 -r -R %s -q 5 - -o output.ogg"},UL,UL,def_str,ss_none},
-  {"cap_videocommand",{NULL, &cap_videocommand},{0,"x264 -o output.mp4 --crf 22 --muxer mp4 --demuxer raw --input-csp rgb --input-depth 8 --input-res %wx%h --fps 35 -"},UL,UL,def_str,ss_none},
+  {"cap_videocommand",{NULL, &cap_videocommand},{0,"x264 -o output.mp4 --crf 18 --muxer mp4 --demuxer raw --input-csp rgb --input-depth 8 --input-res %wx%h --fps %r -"},UL,UL,def_str,ss_none},
   {"cap_muxcommand",{NULL, &cap_muxcommand},{0,"mkvmerge -o %f output.mp4 output.ogg"},UL,UL,def_str,ss_none},
   {"cap_tempfile1",{NULL, &cap_tempfile1},{0,"output.ogg"},UL,UL,def_str,ss_none},
   {"cap_tempfile2",{NULL, &cap_tempfile2},{0,"output.mp4"},UL,UL,def_str,ss_none},
   {"cap_remove_tempfiles", {&cap_remove_tempfiles},{1},0,1,def_bool,ss_none},
+  {"cap_fps", {&cap_fps},{60},16,300,def_int,ss_none},
 
   {"Prboom-plus video settings",{NULL},{0},UL,UL,def_none,ss_none},
-  {"sdl_videodriver", {NULL,&sdl_videodriver}, {0,"default"},UL,UL,
-   def_str,ss_none},
   {"sdl_video_window_pos", {NULL,&sdl_video_window_pos}, {0,"center"},UL,UL,
    def_str,ss_none},
   {"palette_ondamage", {&palette_ondamage},  {1},0,1,
@@ -1001,8 +991,6 @@ default_t defaults[] =
    def_bool,ss_stat},
   {"render_screen_multiply", {&render_screen_multiply},  {1},1,4,
    def_int,ss_stat},
-  {"render_interlaced_scanning", {&render_interlaced_scanning},  {0},0,1,
-   def_bool,ss_stat},
   {"render_aspect", {&render_aspect},  {0},0,4,
    def_int,ss_stat},
   {"render_doom_lightmaps", {&render_doom_lightmaps},  {0},0,1,
@@ -1660,7 +1648,7 @@ void M_DoScreenShot (const char* fname)
 #define SCREENSHOT_DIR "."
 #endif
 
-#ifdef HAVE_LIBPNG
+#ifdef HAVE_LIBSDL2_IMAGE
 #define SCREENSHOT_EXT ".png"
 #else
 #define SCREENSHOT_EXT ".bmp"

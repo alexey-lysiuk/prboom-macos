@@ -75,7 +75,6 @@
 // All OpenGL extentions will be disabled in gl_compatibility mode
 int gl_compatibility = 0;
 
-int gl_vsync = true;
 int gl_clear;
 
 int gl_preprocessed = false;
@@ -425,7 +424,7 @@ void gld_Init(int width, int height)
   gld_InitDetail();
   gld_InitShadows();
 
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
   gld_InitMapPics();
   gld_InitHiRes();
 #endif
@@ -638,7 +637,7 @@ void gld_DrawNumPatch_f(float x, float y, int lump, int cm, enum patch_translati
   dboolean bFakeColormap;
 
   cmap = ((flags & VPT_TRANS) ? cm : CR_DEFAULT);
-  gltexture=gld_RegisterPatch(lump, cmap);
+  gltexture=gld_RegisterPatch(lump, cmap, false);
   gld_BindPatch(gltexture, cmap);
 
   if (!gltexture)
@@ -769,7 +768,7 @@ void gld_FillPatch(int lump, int x, int y, int width, int height, enum patch_tra
   int saved_boom_cm = boom_cm;
   boom_cm = 0;
 
-  gltexture = gld_RegisterPatch(lump, false);
+  gltexture = gld_RegisterPatch(lump, CR_DEFAULT, false);
   gld_BindPatch(gltexture, CR_DEFAULT);
 
   if (!gltexture)
@@ -862,7 +861,7 @@ void gld_DrawWeapon(int weaponlump, vissprite_t *vis, int lightlevel)
   int x1,y1,x2,y2;
   float light;
 
-  gltexture=gld_RegisterPatch(firstspritelump+weaponlump, CR_DEFAULT);
+  gltexture=gld_RegisterPatch(firstspritelump+weaponlump, CR_DEFAULT, false);
   if (!gltexture)
     return;
   gld_BindPatch(gltexture, CR_DEFAULT);
@@ -1029,25 +1028,25 @@ unsigned char *gld_ReadScreen(void)
 
   if (buffer && scr)
   {
-      GLint pack_aligment;
-      glGetIntegerv(GL_PACK_ALIGNMENT, &pack_aligment);
-      glPixelStorei(GL_PACK_ALIGNMENT, 1);
-      
-      glFlush();
-      glReadPixels(0, 0, REAL_SCREENWIDTH, REAL_SCREENHEIGHT, GL_RGB, GL_UNSIGNED_BYTE, scr);
-      
-      glPixelStorei(GL_PACK_ALIGNMENT, pack_aligment);
+    GLint pack_aligment;
+    glGetIntegerv(GL_PACK_ALIGNMENT, &pack_aligment);
+    glPixelStorei(GL_PACK_ALIGNMENT, 1);
+    
+    glFlush();
+    glReadPixels(0, 0, REAL_SCREENWIDTH, REAL_SCREENHEIGHT, GL_RGB, GL_UNSIGNED_BYTE, scr);
+    
+    glPixelStorei(GL_PACK_ALIGNMENT, pack_aligment);
 
-      gld_ApplyGammaRamp(scr, REAL_SCREENWIDTH * 3, REAL_SCREENWIDTH, REAL_SCREENHEIGHT);
+    gld_ApplyGammaRamp(scr, REAL_SCREENWIDTH * 3, REAL_SCREENWIDTH, REAL_SCREENHEIGHT);
 
-      for (i=0; i<REAL_SCREENHEIGHT/2; i++)
-      {
-        memcpy(buffer, &scr[i*REAL_SCREENWIDTH*3], REAL_SCREENWIDTH*3);
-        memcpy(&scr[i*REAL_SCREENWIDTH*3],
-          &scr[(REAL_SCREENHEIGHT-(i+1))*REAL_SCREENWIDTH*3], REAL_SCREENWIDTH*3);
-        memcpy(&scr[(REAL_SCREENHEIGHT-(i+1))*REAL_SCREENWIDTH*3], buffer, REAL_SCREENWIDTH*3);
-      }
+    for (i=0; i<REAL_SCREENHEIGHT/2; i++)
+    {
+      memcpy(buffer, &scr[i*REAL_SCREENWIDTH*3], REAL_SCREENWIDTH*3);
+      memcpy(&scr[i*REAL_SCREENWIDTH*3],
+        &scr[(REAL_SCREENHEIGHT-(i+1))*REAL_SCREENWIDTH*3], REAL_SCREENWIDTH*3);
+      memcpy(&scr[(REAL_SCREENHEIGHT-(i+1))*REAL_SCREENWIDTH*3], buffer, REAL_SCREENWIDTH*3);
     }
+  }
 
   return scr;
 }
@@ -1077,11 +1076,11 @@ void gld_InitDrawScene(void)
 void gld_Finish(void)
 {
   gld_Set2DMode();
-  if (gl_finish)
+  if (gl_finish && !render_vsync && 0)
   {
     glFinish();
   }
-  SDL_GL_SwapBuffers();
+  SDL_GL_SwapWindow(sdl_window);
 }
 
 GLuint flats_vbo_id = 0; // ID of VBO
@@ -2611,7 +2610,7 @@ void gld_ProjectSprite(mobj_t* thing, int lightlevel)
     sprite.fogdensity = gld_CalcFogDensity(thing->subsector->sector, lightlevel, GLDIT_SPRITE);
   }
   sprite.cm = CR_LIMIT + (int)((thing->flags & MF_TRANSLATION) >> (MF_TRANSSHIFT));
-  sprite.gltexture = gld_RegisterPatch(lump, sprite.cm);
+  sprite.gltexture = gld_RegisterPatch(lump, sprite.cm, true);
   if (!sprite.gltexture)
     goto unlock_patch;
   sprite.flags = thing->flags;

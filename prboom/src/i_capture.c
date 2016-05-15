@@ -67,6 +67,8 @@ const char *cap_muxcommand;
 const char *cap_tempfile1;
 const char *cap_tempfile2;
 int cap_remove_tempfiles;
+int cap_fps;
+int cap_frac;
 
 // parses a command with simple printf-style replacements.
 
@@ -97,6 +99,9 @@ static int parsecommand (char *out, const char *in, int len)
           break;
         case 'f':
           i = doom_snprintf (out, len, "%s", vid_fname);
+          break;
+        case 'r':
+          i = doom_snprintf (out, len, "%u", cap_fps);
           break;
         case '%':
           i = doom_snprintf (out, len, "%%");
@@ -136,8 +141,9 @@ static void my_pclose3 (pipeinfo_t *p);
 
 #ifdef _WIN32
 // direct winapi implementation
-
-#define WIN32_LEAN_AND_MEAN
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN 1
+#endif
 #include <windows.h>
 #include <io.h>
 
@@ -531,12 +537,12 @@ void I_CapturePrep (const char *fn)
   // start reader threads
   soundpipe.stdoutdumpname = "sound_stdout.txt";
   soundpipe.stderrdumpname = "sound_stderr.txt";
-  soundpipe.outthread = SDL_CreateThread (threadstdoutproc, &soundpipe);
-  soundpipe.errthread = SDL_CreateThread (threadstderrproc, &soundpipe);
+  soundpipe.outthread = SDL_CreateThread (threadstdoutproc, "soundpipe.outthread", &soundpipe);
+  soundpipe.errthread = SDL_CreateThread (threadstderrproc, "soundpipe.errthread", &soundpipe);
   videopipe.stdoutdumpname = "video_stdout.txt";
   videopipe.stderrdumpname = "video_stderr.txt";
-  videopipe.outthread = SDL_CreateThread (threadstdoutproc, &videopipe);
-  videopipe.errthread = SDL_CreateThread (threadstderrproc, &videopipe);
+  videopipe.outthread = SDL_CreateThread (threadstdoutproc, "videopipe.outthread", &videopipe);
+  videopipe.errthread = SDL_CreateThread (threadstderrproc, "videopipe.errthread", &videopipe);
 
   atexit (I_CaptureFinish);
 }
@@ -555,11 +561,11 @@ void I_CaptureFrame (void)
   if (!capturing_video)
     return;
 
-  nsampreq = snd_samplerate / 35;
-  partsof35 += snd_samplerate % 35;
-  if (partsof35 >= 35)
+  nsampreq = snd_samplerate / cap_fps;
+  partsof35 += snd_samplerate % cap_fps;
+  if (partsof35 >= cap_fps)
   {
-    partsof35 -= 35;
+    partsof35 -= cap_fps;
     nsampreq++;
   }
 
@@ -615,8 +621,8 @@ void I_CaptureFinish (void)
 
   muxpipe.stdoutdumpname = "mux_stdout.txt";
   muxpipe.stderrdumpname = "mux_stderr.txt";
-  muxpipe.outthread = SDL_CreateThread (threadstdoutproc, &muxpipe);
-  muxpipe.errthread = SDL_CreateThread (threadstderrproc, &muxpipe);
+  muxpipe.outthread = SDL_CreateThread (threadstdoutproc, "muxpipe.outthread", &muxpipe);
+  muxpipe.errthread = SDL_CreateThread (threadstderrproc, "muxpipe.errthread", &muxpipe);
 
   my_pclose3 (&muxpipe);
   SDL_WaitThread (muxpipe.outthread, &s);

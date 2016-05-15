@@ -39,7 +39,9 @@
 
 #include "z_zone.h"
 #ifdef _WIN32
-#define WIN32_LEAN_AND_MEAN
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN 1
+#endif
 #include <windows.h>
 #endif
 #ifndef CALLBACK
@@ -952,7 +954,7 @@ void gld_BindTexture(GLTexture *gltexture, unsigned int flags)
     return;
   }
 
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
   if (gld_LoadHiresTex(gltexture, CR_DEFAULT))
   {
     gld_SetTexClamp(gltexture, flags);
@@ -1003,7 +1005,7 @@ void gld_BindTexture(GLTexture *gltexture, unsigned int flags)
   gld_SetTexClamp(gltexture, flags);
 }
 
-GLTexture *gld_RegisterPatch(int lump, int cm)
+GLTexture *gld_RegisterPatch(int lump, int cm, dboolean is_sprite)
 {
   const rpatch_t *patch;
   GLTexture *gltexture;
@@ -1021,7 +1023,7 @@ GLTexture *gld_RegisterPatch(int lump, int cm)
 
     //e6y
     gltexture->flags = 0;
-    if (lump >= firstspritelump && lump > (firstspritelump + numsprites))
+    if (is_sprite)
     {
       gltexture->flags |= GLTEXTURE_SPRITE;
       if (tex_filter[MIP_SPRITE].mipmap)
@@ -1086,7 +1088,7 @@ void gld_BindPatch(GLTexture *gltexture, int cm)
     return;
   }
 
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
   if (gld_LoadHiresTex(gltexture, cm))
   {
     gld_SetTexClamp(gltexture, GLTEXTURE_CLAMPXY);
@@ -1222,7 +1224,7 @@ void gld_BindFlat(GLTexture *gltexture, unsigned int flags)
     return;
   }
 
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
   if (gld_LoadHiresTex(gltexture, CR_DEFAULT))
   {
     gld_SetTexClamp(gltexture, flags);
@@ -1315,7 +1317,7 @@ void gld_FlushTextures(void)
   gl_has_hires = 0;
   
   gld_ResetLastTexture();
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
   gld_HiRes_BuildTables();
 #endif
 
@@ -1546,7 +1548,7 @@ void gld_Precache(void)
             do
             {
               gld_ProgressUpdate("Loading Sprites...", ++hit, hitcount);
-              gltexture = gld_RegisterPatch(firstspritelump + sflump[k], CR_LIMIT);
+              gltexture = gld_RegisterPatch(firstspritelump + sflump[k], CR_LIMIT, true);
               if (gltexture)
               {
                 gld_BindPatch(gltexture, CR_LIMIT);
@@ -1559,7 +1561,7 @@ void gld_Precache(void)
 
   if (gl_texture_external_hires)
   {
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
     gld_PrecacheGUIPatches();
 #endif
   }

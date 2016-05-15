@@ -6,7 +6,7 @@
 #define PACKAGE_TARNAME "prboom-plus"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.5.1.4"
+#define PACKAGE_VERSION "2.5.1.5"
 
 #ifdef DEBUG
 
@@ -54,8 +54,8 @@
 #define HAVE_NET 1
 #define USE_SDL_NET 1
 
-/* Define if you have the SDL image library -lSDL_image */
-#define HAVE_LIBSDL_IMAGE
+/* Define if you have the SDL image library -lSDL2_image */
+#define HAVE_LIBSDL2_IMAGE
 
 /* Define if you want to use FBO for some tricks in OpenGL */
 #define USE_FBO_TECHNIQUE 1
@@ -105,8 +105,6 @@
 #ifdef __i386__
 #define I386_ASM 1
 #endif
-
-#define PACKEDATTR __attribute__((packed))
 
 #define MACOSX
 #define HAVE_LIBKERN_OSBYTEORDER_H

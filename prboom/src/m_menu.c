@@ -3064,10 +3064,7 @@ setup_menu_t gen_settings1[] = { // General Settings screen1
   {"Aspect Ratio",                   S_CHOICE,           m_null, G_X, G_Y+ 4*8, {"render_aspect"}, 0, 0, M_ChangeAspectRatio, render_aspects_list},
   {"Fullscreen Video mode",          S_YESNO,            m_null, G_X, G_Y+ 5*8, {"use_fullscreen"}, 0, 0, M_ChangeFullScreen},
   {"Status Bar and Menu Appearance", S_CHOICE,           m_null, G_X, G_Y+ 6*8, {"render_stretch_hud"}, 0, 0, M_ChangeStretch, render_stretch_list},
-#ifdef GL_DOOM
-  {"Use GL surface for software mode",S_YESNO,           m_null, G_X, G_Y+ 7*8, {"use_gl_surface"}, 0, 0, M_ChangeUseGLSurface},
-  {"Vertical Sync",                  S_YESNO|S_PRGWARN,  m_null, G_X, G_Y+ 8*8, {"gl_vsync"}},
-#endif
+  {"Vertical Sync",                  S_YESNO,            m_null, G_X, G_Y+ 7*8, {"render_vsync"}, 0, 0, M_ChangeVideoMode},
   
   {"Enable Translucency",            S_YESNO,            m_null, G_X, G_Y+10*8, {"translucency"}, 0, 0, M_Trans},
   {"Translucency filter percentage", S_NUM,              m_null, G_X, G_Y+11*8, {"tran_filter_pct"}, 0, 0, M_Trans},
@@ -3076,9 +3073,7 @@ setup_menu_t gen_settings1[] = { // General Settings screen1
   {"Sound & Music",                  S_SKIP|S_TITLE,     m_null, G_X, G_Y+14*8},
   {"Number of Sound Channels",       S_NUM|S_PRGWARN,    m_null, G_X, G_Y+15*8, {"snd_channels"}},
   {"Enable v1.1 Pitch Effects",      S_YESNO,            m_null, G_X, G_Y+16*8, {"pitched_sounds"}},
-//#ifdef HAVE_LIBSDL_MIXER
   {"PC Speaker emulation",           S_YESNO|S_PRGWARN,  m_null, G_X, G_Y+17*8, {"snd_pcspeaker"}},
-//#endif
   {"Preferred MIDI player",          S_CHOICE|S_PRGWARN, m_null, G_X, G_Y+18*8, {"snd_midiplayer"}, 0, 0, M_ChangeMIDIPlayer, midiplayers},
 
   // Button for resetting to defaults
@@ -3200,7 +3195,6 @@ setup_menu_t gen_settings4[] = { // General Settings screen3
 setup_menu_t gen_settings5[] = { // General Settings screen3
   {"Software Options",               S_SKIP|S_TITLE, m_null, G_X, G_Y+1*8},
   {"Screen Multiple Factor (1-None)", S_NUM,m_null,G_X,G_Y+2*8, {"render_screen_multiply"}, 0, 0, M_ChangeScreenMultipleFactor},
-  {"Interlaced Scanning",       S_YESNO,  m_null, G_X, G_Y+3*8, {"render_interlaced_scanning"}, 0, 0, M_ChangeInterlacedScanning},
 #ifdef GL_DOOM
   {"OpenGL Options",             S_SKIP|S_TITLE,m_null,G_X,G_Y+5*8},
   {"Multisampling (0-None)",    S_NUM|S_PRGWARN|S_CANT_GL_ARB_MULTISAMPLEFACTOR,m_null,G_X,G_Y+6*8, {"render_multisampling"}, 0, 0, M_ChangeMultiSample},
@@ -4114,6 +4108,7 @@ int M_GetKeyString(int c,int offset)
       case KEYD_PAUSE:      s = "PAUS"; break;
       case KEYD_MWHEELDOWN: s = "MWDN"; break;
       case KEYD_MWHEELUP:   s = "MWUP"; break;
+      case KEYD_PRINTSC:    s = "PRSC"; break;
       default:              s = "JUNK"; break;
       }
 
@@ -4422,35 +4417,6 @@ dboolean M_Responder (event_t* ev) {
   } else {
    // Process mouse input
     if (ev->type == ev_mouse && mousewait < I_GetTime()) {
-/* e6y: do not process mouse input in menu
-      mousey += ev->data3;
-      if (mousey < lasty-30)
-  {
-    ch = key_menu_down;                            // phares 3/7/98
-    mousewait = I_GetTime() + 5;
-    mousey = lasty -= 30;
-  }
-      else if (mousey > lasty+30)
-  {
-    ch = key_menu_up;                              // phares 3/7/98
-    mousewait = I_GetTime() + 5;
-    mousey = lasty += 30;
-  }
-
-      mousex += ev->data2;
-      if (mousex < lastx-30)
-  {
-    ch = key_menu_left;                            // phares 3/7/98
-    mousewait = I_GetTime() + 5;
-    mousex = lastx -= 30;
-  }
-      else if (mousex > lastx+30)
-  {
-    ch = key_menu_right;                           // phares 3/7/98
-    mousewait = I_GetTime() + 5;
-    mousex = lastx += 30;
-  }
-*/
 
       if (ev->data1&1)
   {
@@ -6083,7 +6049,6 @@ void M_Init(void)
   M_ChangeSpriteClip();
   M_ChangeAllowBoomColormaps();
 #endif
-  M_ChangeInterlacedScanning();
 
   M_ChangeDemoSmoothTurns();
   M_ChangeDemoExtendedFormat();

@@ -92,8 +92,8 @@
 /* Define to be the path where Doom WADs are stored */
 #define DOOMWADDIR "/usr/local/share/games/doom"
 
-/* Define if you have the SDL mixer library -lSDL_mixer */
-#define HAVE_LIBSDL_MIXER 1
+/* Define if you have the SDL2 mixer library -lSDL2_mixer */
+#define HAVE_LIBSDL2_MIXER 1
 
 /* Define if you want networkg ame support */
 #define HAVE_NET 1
@@ -137,11 +137,6 @@
 /* Define if you want to use the Windows launcher */
 #define USE_WINDOWS_LAUNCHER 1
 
-/* Set to the attribute to apply to struct definitions to make them packed.
- * For MSVC++ we can't do it like this, there are pragma's in the source
- * instead. */
-#define PACKEDATTR
-
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "PrBoom-Plus"
 
@@ -149,10 +144,13 @@
 #define PACKAGE_TARNAME "prboom-plus"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.5.1.4"
+#define PACKAGE_VERSION "2.5.1.5"
 
-/* Define if you have the SDL image library -lSDL_image */
-#define HAVE_LIBSDL_IMAGE
+/* Define if you have the SDL2 image library -lSDL2_image */
+#define HAVE_LIBSDL2_IMAGE 1
+
+/* Define if you have the PCRE library */
+#define HAVE_LIBPCREPOSIX 1
 
 /* Define if you want to use FBO for some tricks in OpenGL */
 #define USE_FBO_TECHNIQUE 1
@@ -239,12 +237,18 @@
   #define LINK_LIBRARY(x) comment(lib, x".lib")
 #endif
 
-#pragma comment( lib, "SDL.lib" )
-#pragma comment( lib, "SDL_mixer.lib" )
-#pragma comment( lib, "SDL_net.lib" )
-#ifdef HAVE_LIBSDL_IMAGE
-  #pragma comment( lib, "SDL_image.lib" )
-#endif // HAVE_LIBSDL_IMAGE
+#pragma comment( lib, "SDL2.lib" )
+#pragma comment( lib, "SDL2_mixer.lib" )
+#pragma comment( lib, "SDL2_net.lib" )
+
+#ifdef HAVE_LIBSDL2_IMAGE
+  #pragma comment( lib, "SDL2_image.lib" )
+#endif // HAVE_LIBSDL2_IMAGE
+
+#ifdef HAVE_LIBPCREPOSIX
+#pragma comment( lib, "pcre3.lib" )
+#pragma comment( lib, "pcreposix3.lib" )
+#endif // HAVE_LIBPCREPOSIX
 
 #endif // _MSC_VER
 

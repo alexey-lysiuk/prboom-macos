@@ -49,7 +49,7 @@ RSC=rc.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /D "I386_ASM" /FR /YX /FD /c
+# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /D "I386_ASM" /FR /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "NDEBUG"
@@ -59,7 +59,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /machine:I386
-# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"Release/prboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"Release/prboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile
 # Begin Special Build Tool
 SOURCE="$(InputPath)"
@@ -80,7 +80,7 @@ PostBuild_Cmds=del Release\version.obj
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
+# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "_DEBUG"
@@ -90,7 +90,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"Debug/prboom-plus.exe" /pdbtype:sept /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"Debug/prboom-plus.exe" /pdbtype:sept /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL"
@@ -108,7 +108,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HIGHRES" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "GL_DOOM" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
+# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "GL_DOOM" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
 # SUBTRACT CPP /Fr
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
@@ -119,7 +119,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib sdl.lib /nologo /subsystem:windows /machine:I386
-# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /profile /map /machine:I386 /out:"ReleaseGL/glboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /profile /map /machine:I386 /out:"ReleaseGL/glboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /debug /nodefaultlib
 # Begin Special Build Tool
 SOURCE="$(InputPath)"
@@ -141,7 +141,7 @@ PostBuild_Cmds=del ReleaseGL\version.obj
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "HIGHRES" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /YX /FD /c
-# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "GL_DOOM" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /FR /YX /FD /c
+# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "GL_DOOM" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /FR /YX /FD /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "_DEBUG"
@@ -151,7 +151,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib sdl.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugGL/glboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugGL/glboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile /nodefaultlib
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release NOASM"
@@ -169,7 +169,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "../VisualC6" /I "../src" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /YX /FD /c
+# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "NDEBUG"
@@ -179,7 +179,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib sdl.lib /nologo /subsystem:windows /machine:I386
-# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"ReleaseNOASM/prboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"ReleaseNOASM/prboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL NOASM"
@@ -197,7 +197,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O2 /I "../VisualC6" /I "../src" /D "NDEBUG" /D "GL_DOOM" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "GL_DOOM" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /FR /YX /FD /c
+# ADD CPP /nologo /MT /W3 /WX /GX /O2 /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "NDEBUG" /D "GL_DOOM" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /FR /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "NDEBUG"
@@ -208,7 +208,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib sdl.lib opengl32.lib glu32.lib /nologo /subsystem:windows /machine:I386
 # SUBTRACT BASE LINK32 /profile /debug
-# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"ReleaseNOASMGL/glboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /machine:I386 /out:"ReleaseNOASMGL/glboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile /debug
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug NOASM"
@@ -226,7 +226,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
-# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /FR /YX /FD /c
+# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /FR /YX /FD /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "_DEBUG"
@@ -237,7 +237,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 user32.lib gdi32.lib sdl.lib sdl_mixer.lib sdl_net.lib /nologo /subsystem:windows /debug /machine:I386 /out:"Debug/prboom.exe" /pdbtype:sept
 # SUBTRACT BASE LINK32 /profile
-# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugNOASM/prboom-plus.exe" /pdbtype:sept /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugNOASM/prboom-plus.exe" /pdbtype:sept /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug OpenGL NOASM"
@@ -255,7 +255,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /D "GL_DOOM" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /D "I386_ASM" /YX /FD /c
-# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/PCRELIB" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "GL_DOOM" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /FR /YX /FD /c
+# ADD CPP /nologo /MTd /W3 /WX /Gm /GX /ZI /Od /I "../VisualC6" /I "../src" /I "../src/MUSIC/include/portmidi" /I "../src/MUSIC/include/dumb" /I "../src/MUSIC/include/libmad" /I "../src/MUSIC/include/fluidsynth" /I "../src/MUSIC/include/vorbis" /D "GL_DOOM" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "INSTRUMENTED" /D "RANGECHECK" /D "SIMPLECHECKS" /D "TIMEDIAG" /D "HEAPDUMP" /D "HAVE_CONFIG_H" /FR /YX /FD /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
 # ADD BASE RSC /l 0x407 /d "_DEBUG"
@@ -266,7 +266,7 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib sdl.lib sdl_mixer.lib sdl_net.lib /nologo /subsystem:windows /debug /machine:I386 /out:"DebugGL/glboom.exe"
 # SUBTRACT BASE LINK32 /profile
-# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugNOASMGL/glboom-plus.exe" /libpath:"../src/PCRELIB/VisualC6/lib" /libpath:"../src/MUSIC/lib"
+# ADD LINK32 opengl32.lib glu32.lib user32.lib gdi32.lib /nologo /subsystem:windows /map /debug /machine:I386 /out:"DebugNOASMGL/glboom-plus.exe" /libpath:"../src/MUSIC/lib"
 # SUBTRACT LINK32 /profile
 
 !ENDIF 
@@ -881,14 +881,6 @@ SOURCE=..\src\r_plane.c
 # Begin Source File
 
 SOURCE=..\src\r_plane.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\r_screenmultiply.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\r_screenmultiply.h
 # End Source File
 # Begin Source File
 
@@ -1594,37 +1586,6 @@ SOURCE=..\src\gl_sky.c
 # End Source File
 # Begin Source File
 
-SOURCE=..\src\gl_soft2gl.c
-
-!IF  "$(CFG)" == "Doom - Win32 Release"
-
-# PROP Exclude_From_Build 1
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Debug"
-
-# PROP Exclude_From_Build 1
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL"
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Debug OpenGL"
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Release NOASM"
-
-# PROP Exclude_From_Build 1
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL NOASM"
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Debug NOASM"
-
-# PROP Exclude_From_Build 1
-
-!ELSEIF  "$(CFG)" == "Doom - Win32 Debug OpenGL NOASM"
-
-!ENDIF 
-
-# End Source File
-# Begin Source File
-
 SOURCE=..\src\gl_struct.h
 
 !IF  "$(CFG)" == "Doom - Win32 Release"
@@ -1777,58 +1738,58 @@ SOURCE=..\Icons\icons.rc
 
 !IF  "$(CFG)" == "Doom - Win32 Release"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug OpenGL"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release NOASM"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Release OpenGL NOASM"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug NOASM"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ELSEIF  "$(CFG)" == "Doom - Win32 Debug OpenGL NOASM"
 
-# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD BASE RSC /l 0x419 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT BASE RSC /i "./../VisualC6"
-# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
+# ADD RSC /l 0x409 /i "\andre\prg\doom\prboom-plus\prboom-plus\Icons" /i "\andre\prg\doom\prboom-plus\branches\prboom-plus-24\Icons" /i "\andre\prg\prboom-plus\branches\prboom-plus-24\Icons"
 # SUBTRACT RSC /i "./../VisualC6"
 
 !ENDIF 
@@ -1880,95 +1841,15 @@ SOURCE=..\src\TEXTSCREEN\doomkeys.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\src\TEXTSCREEN\textscreen.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_button.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_button.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_checkbox.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_checkbox.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_desktop.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_desktop.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_dropdown.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_dropdown.h
-# End Source File
-# Begin Source File
-
 SOURCE=..\src\TEXTSCREEN\txt_font.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\src\TEXTSCREEN\txt_gui.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_gui.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_inputbox.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_inputbox.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_io.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_io.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_label.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_label.h
+SOURCE=..\src\TEXTSCREEN\txt_largefont.h
 # End Source File
 # Begin Source File
 
 SOURCE=..\src\TEXTSCREEN\txt_main.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_radiobutton.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_radiobutton.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_scrollpane.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_scrollpane.h
 # End Source File
 # Begin Source File
 
@@ -1980,63 +1861,7 @@ SOURCE=..\src\TEXTSCREEN\txt_sdl.h
 # End Source File
 # Begin Source File
 
-SOURCE=..\src\TEXTSCREEN\txt_separator.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_separator.h
-# End Source File
-# Begin Source File
-
 SOURCE=..\src\TEXTSCREEN\txt_smallfont.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_spinctrl.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_spinctrl.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_strut.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_strut.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_table.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_table.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_widget.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_widget.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_window.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_window.h
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_window_action.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\src\TEXTSCREEN\txt_window_action.h
 # End Source File
 # End Group
 # Begin Group "Music"
@@ -2129,7 +1954,7 @@ SOURCE=..\src\MUSIC\vorbisplayer.h
 # End Group
 # Begin Source File
 
-SOURCE=..\src\SDL\SDL_win32_main.c
+SOURCE=..\src\SDL\SDL_windows_main.c
 # End Source File
 # End Target
 # End Project

@@ -45,7 +45,7 @@
 #endif
 #include <sys/stat.h>
 #include <SDL.h>
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
 #include <SDL_image.h>
 #endif
 #include "doomstat.h"
@@ -178,7 +178,7 @@ void gld_ProgressUpdate(const char * text, int progress, int total)
   I_FinishUpdate();
 }
 
-#ifdef HAVE_LIBSDL_IMAGE
+#ifdef HAVE_LIBSDL2_IMAGE
 
 static const char* gld_HiRes_GetInternalName(GLTexture *gltexture);
 static int gld_HiRes_GetExternalName(GLTexture *gltexture, char *img_path, char *dds_path);
@@ -1227,7 +1227,7 @@ static int gld_HiRes_LoadFromFile(GLTexture* gltexture, GLuint* texid, const cha
   }
   else
   {
-    surf = SDL_ConvertSurface(surf_tmp, &RGBAFormat, SDL_SRCALPHA);
+    surf = SDL_ConvertSurface(surf_tmp, &RGBAFormat, 0);
     SDL_FreeSurface(surf_tmp);
 
     if (surf)
@@ -1292,7 +1292,7 @@ int gld_LoadHiresTex(GLTexture *gltexture, int cm)
             }
             else
             {
-              SDL_Surface *surf = SDL_ConvertSurface(surf_tmp, &RGBAFormat, SDL_SRCALPHA);
+              SDL_Surface *surf = SDL_ConvertSurface(surf_tmp, &RGBAFormat, 0);
               SDL_FreeSurface(surf_tmp);
 
               if (surf)
@@ -1455,7 +1455,7 @@ int gld_PrecacheGUIPatches(void)
       GLTexture *gltexture;
       
       lumpinfo[lump].flags |= LUMP_STATIC;
-      gltexture = gld_RegisterPatch(lump, CR_DEFAULT);
+      gltexture = gld_RegisterPatch(lump, CR_DEFAULT, false);
       if (gltexture)
       {
         gld_BindPatch(gltexture, CR_DEFAULT);
@@ -1472,4 +1472,4 @@ int gld_PrecacheGUIPatches(void)
   return 0;
 }
 
-#endif // HAVE_LIBSDL_IMAGE
+#endif // HAVE_LIBSDL2_IMAGE

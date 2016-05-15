@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([PrBoom-Plus],[2.5.1.4],[],[prboom-plus])
+AC_INIT([PrBoom-Plus],[2.5.1.5],[],[prboom-plus])
 
 AC_CONFIG_HEADER(config.h)
 AC_CONFIG_AUX_DIR(autotools)
@@ -28,15 +28,6 @@ AC_PROG_CC
 AC_PROG_LN_S
 AC_PROG_RANLIB
 AC_GNU_SOURCE
-
-if test "x$GCC" = "xyes"; then
-  AC_DEFINE(PACKEDATTR,[__attribute__((packed))],[Set to the attribute to apply to struct definitions to make them packed])
-else
-  AC_DEFINE(PACKEDATTR,[])
-  echo "-!- Your compiler is not gcc. We probably don't know how to force"
-  echo '    structures to be packed with your compiler. You may have to edit'
-  echo '    the source to insert the relevant pragmas so structures are packed.'
-fi
 
 dnl --- cph: work out flags to pass to compiler
 CFLAGS_OPT="-O2 -fomit-frame-pointer"
@@ -97,7 +88,7 @@ dnl - system specific stuff
 dnl - winmm for the midi volume hack
 case "$target" in
     *-*-cygwin* | *-*-mingw32*)
-        SYS_GL_LIBS="-lopengl32 -lglu32"
+        SYS_GL_LIBS="-lopengl32 -lglu32 -lgdi32"
 	LIBS="-lwinmm $LIBS"
         ;;
     *-*-beos*)
@@ -139,7 +130,7 @@ fi
 AM_CONDITIONAL(BUILD_GL,test "$enable_gl" = "yes")
 
 dnl - SDL
-AM_PATH_SDL(1.1.3, sdl_main="yes")
+AM_PATH_SDL2([2.0.0], [sdl_main="yes"])
 if test "$sdl_main" != "yes"
 then
  AC_MSG_ERROR([*** You must have the SDL libraries installed before you can compile prboom
@@ -156,7 +147,7 @@ AC_ARG_WITH([mixer],
   AC_HELP_STRING([--without-mixer],[Do not use SDL_mixer even if available]),
   [], [with_mixer=yes])
 AS_IF([test "x$with_mixer" != xno],
-  AC_CHECK_LIB(SDL_mixer,Mix_OpenAudio,[],[],[$SDL_LIBS $MIXER_LIBS]))
+  AC_CHECK_LIB(SDL2_mixer,Mix_OpenAudio,[],[],[$SDL_LIBS $MIXER_LIBS]))
 
 AC_ARG_WITH(net,
   AS_HELP_STRING([--without-net],[Do not use SDL_net even if available]),
@@ -167,23 +158,11 @@ AS_IF([test "x$with_net" = xno],
     NET_LIBS=
   ],[
     dnl -- Check for networking support
-    AC_CHECK_LIB(SDL_net,SDLNet_UDP_Bind,[
+    AC_CHECK_LIB(SDL2_net,SDLNet_UDP_Bind,[
       AC_DEFINE(HAVE_NET,1,[Define if you want network game support])
-      AC_DEFINE(HAVE_LIBSDL_NET,1,
-        [Define if you have the SDL net library -lSDL_net])
       AC_DEFINE(USE_SDL_NET,1,[Define if you want to use the SDL net lib])
-      NET_LIBS=-lSDL_net
+      NET_LIBS=-lSDL2_net
       sdl_net=yes
-      save_CFLAGS="$CFLAGS"
-      CFLAGS="$CFLAGS $SDL_CFLAGS"
-      AC_TRY_COMPILE([
-          #include "SDL_net.h"
-          ],[
-          UDPpacket *p;
-          int n = sizeof(p->src);
-          ],
-          AC_DEFINE(SDL_NET_UDP_PACKET_SRC,1,[Define if you have an old SDL_net, such that the UDPpacket structure has a src member instead of an address member]))
-      CFLAGS="$save_CFLAGS"
     ],[
       dnl -- Warn if networking support was not disabled but sdlnet is missing
       AC_MSG_WARN([*** SDL networking library not found. The game will not be compiled with network game support.])
@@ -238,11 +217,7 @@ AC_ARG_WITH(image,
   [AS_HELP_STRING([--without-image],[Do not use SDL_image even if available])],,
   [with_image=yes])
 AS_IF([test "x$with_image" != xno],
-  AC_CHECK_LIB(SDL_image,IMG_Load))
-
-dnl - libpng
-AC_ARG_WITH([png], AC_HELP_STRING([--without-png], [Do not use libpng even if available]),,with_png=yes)
-AS_IF([test "x$with_png" != xno],AC_CHECK_LIB(png,png_create_info_struct))
+  AC_CHECK_LIB(SDL2_image,IMG_Load))
 
 AC_EGREP_HEADER(sockaddr_in6,netinet/in.h,AC_DEFINE(HAVE_IPv6,1,[Define if you have struct sockaddr_in6]))
 

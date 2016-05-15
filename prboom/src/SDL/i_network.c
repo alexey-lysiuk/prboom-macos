@@ -112,10 +112,6 @@ void I_WaitForPacket(int ms)
   SDLNet_UDP_AddSocket(ss, udp_socket);
   SDLNet_CheckSockets(ss,ms);
   SDLNet_FreeSocketSet(ss);
-  // build script doesn't allow this
-//#if (defined _WIN32 && !defined PRBOOM_SERVER)
-//  I_UpdateConsole();
-//#endif
 }
 
 /* I_ConnectToServer
@@ -240,11 +236,7 @@ size_t I_GetPacket(packet_header_t* buffer, size_t buflen)
   if ( (status!=0) && (len>0) )
     memcpy(buffer, udp_packet->data, len);
   sentfrom=udp_packet->channel;
-#ifndef SDL_NET_UDP_PACKET_SRC
   sentfrom_addr=udp_packet->address;
-#else
-  sentfrom_addr=udp_packet->src; /* cph - allow for old SDL_net library */
-#endif
   checksum=buffer->checksum;
   buffer->checksum=0;
   if ( (status!=0) && (len>0)) {
