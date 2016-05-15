@@ -240,7 +240,7 @@ while (SDL_PollEvent(Event))
   switch (Event->type) {
   case SDL_KEYDOWN:
 #ifdef MACOSX
-    if (Event->key.keysym.mod & KMOD_META)
+    if (Event->key.keysym.mod & KMOD_GUI)
     {
       // Switch windowed<->fullscreen if pressed <Command-F>
       if (Event->key.keysym.sym == SDLK_f)
