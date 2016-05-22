@@ -6,7 +6,7 @@
 #define PACKAGE_TARNAME "prboom-plus"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.5.1.4"
+#define PACKAGE_VERSION "2.5.1.5"
 
 #ifdef DEBUG
 
@@ -55,7 +55,7 @@
 #define USE_SDL_NET 1
 
 /* Define if you have the SDL image library -lSDL_image */
-#define HAVE_LIBSDL_IMAGE
+#define HAVE_LIBSDL2_IMAGE
 
 /* Define if you want to use FBO for some tricks in OpenGL */
 #define USE_FBO_TECHNIQUE 1
@@ -139,7 +139,7 @@ typedef unsigned char byte;
 #define HAVE_LIBPORTMIDI 1
 
 /* Define to 1 if you have the `SDL_mixer' library (-lSDL_mixer). */
-#define HAVE_LIBSDL_MIXER 1
+#define HAVE_LIBSDL2_MIXER 1
 
 /* Define to 1 if you have the `vorbisfile' library (-lvorbisfile). */
 #define HAVE_LIBVORBISFILE 1
