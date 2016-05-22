@@ -22,22 +22,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8A19E5FD1CF1957F00D3393E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A19E5FC1CF1957F00D3393E /* AudioToolbox.framework */; };
+		8A19E6001CF195F400D3393E /* libmodplug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A19E5FE1CF195B900D3393E /* libmodplug.a */; };
 		8A225AB11CDDF987009481D2 /* i_system.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8AE21CDDDD6600ED0040 /* i_system.c */; };
 		8A225AB21CDDF98A009481D2 /* i_network.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8B0F1CDDDD6700ED0040 /* i_network.c */; };
 		8A225AB31CDDF992009481D2 /* d_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A231CDDDD6600ED0040 /* d_server.c */; };
 		8A7411AD1CE06F1F00A52F12 /* libfluidsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AA1CE06EE800A52F12 /* libfluidsynth.a */; };
 		8A7411AE1CE06F1F00A52F12 /* libglib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AB1CE06EE800A52F12 /* libglib.a */; };
 		8A7411AF1CE06F1F00A52F12 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411AC1CE06EE800A52F12 /* libintl.a */; };
-		8A7411B31CE06F4700A52F12 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B21CE06F4700A52F12 /* libiconv.dylib */; };
 		8A7411B41CE06F5800A52F12 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B21CE06F4700A52F12 /* libiconv.dylib */; };
-		8A7411B81CE06F7000A52F12 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B71CE06F7000A52F12 /* CoreMIDI.framework */; };
-		8A7411C51CE06F9000A52F12 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411C41CE06F9000A52F12 /* CoreAudio.framework */; };
 		8A7412331CE0720B00A52F12 /* portmidiplayer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8AB41CDDDD6600ED0040 /* portmidiplayer.c */; };
 		8A7412421CE072BA00A52F12 /* libportmidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7412411CE072A200A52F12 /* libportmidi.a */; };
 		8A7412A31CE07ECA00A52F12 /* Launcher.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A121CDDDD1D00ED0040 /* Launcher.icns */; };
 		8A7412A41CE07ECD00A52F12 /* PrBoom.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A141CDDDD1D00ED0040 /* PrBoom.sdef */; };
 		8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAC91CDF620800F66D33 /* libpng16.a */; };
-		8ABAEAD21CDF627900F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
 		8ABAEAD31CDF628C00F66D33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAD11CDF627900F66D33 /* libz.dylib */; };
 		8ABAEAF41CDF68AD00F66D33 /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAF21CDF689B00F66D33 /* libvorbis.a */; };
 		8ABAEAF51CDF68AD00F66D33 /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEAF31CDF689B00F66D33 /* libvorbisfile.a */; };
@@ -47,9 +45,6 @@
 		8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */; };
 		8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */; };
 		8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */; };
-		8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
-		8AC015321CDE172E00DA951B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015311CDE172E00DA951B /* Carbon.framework */; };
-		8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC015F21CDE174C00DA951B /* IOKit.framework */; };
 		8AC016E01CDE1B8100DA951B /* i_system.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A7F1CDDDD6600ED0040 /* i_system.m */; };
 		8AC016E21CDE1B8C00DA951B /* pcsound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADC1CDDDD6600ED0040 /* pcsound.c */; };
 		8AC016E31CDE1B8E00DA951B /* pcsound_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADF1CDDDD6600ED0040 /* pcsound_sdl.c */; };
@@ -242,6 +237,8 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8A19E5FC1CF1957F00D3393E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8A19E5FE1CF195B900D3393E /* libmodplug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmodplug.a; path = thirdparty/modplug/lib/libmodplug.a; sourceTree = "<group>"; };
 		8A225A971CDDF93D009481D2 /* PrBoom-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PrBoom-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A225AA41CDDF947009481D2 /* Server-Plus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Server-Plus"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A58AD8D1CE858E00074C41F /* b_end.lmp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = b_end.lmp; sourceTree = "<group>"; };
@@ -828,6 +825,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A19E5FD1CF1957F00D3393E /* AudioToolbox.framework in Frameworks */,
 				8AD33E5F1CE85F89002540B4 /* AudioUnit.framework in Frameworks */,
 				8AD33E5B1CE85F3F002540B4 /* Carbon.framework in Frameworks */,
 				8AD33E571CE85F23002540B4 /* Cocoa.framework in Frameworks */,
@@ -850,6 +848,7 @@
 				8A7411AF1CE06F1F00A52F12 /* libintl.a in Frameworks */,
 				8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */,
 				8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */,
+				8A19E6001CF195F400D3393E /* libmodplug.a in Frameworks */,
 				8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */,
 				8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */,
 				8A7412421CE072BA00A52F12 /* libportmidi.a in Frameworks */,
@@ -887,13 +886,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				8AC0151C1CDE170F00DA951B /* AudioUnit.framework in Frameworks */,
-				8AC015321CDE172E00DA951B /* Carbon.framework in Frameworks */,
-				8AC015F31CDE174C00DA951B /* IOKit.framework in Frameworks */,
-				8ABAEAD21CDF627900F66D33 /* libz.dylib in Frameworks */,
-				8A7411B31CE06F4700A52F12 /* libiconv.dylib in Frameworks */,
-				8A7411B81CE06F7000A52F12 /* CoreMIDI.framework in Frameworks */,
-				8A7411C51CE06F9000A52F12 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +927,7 @@
 		29B97323FDCFA39411CA2CEA /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				8A19E5FC1CF1957F00D3393E /* AudioToolbox.framework */,
 				8AC0151B1CDE170F00DA951B /* AudioUnit.framework */,
 				8AC015311CDE172E00DA951B /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -957,6 +950,7 @@
 				8A7411AC1CE06EE800A52F12 /* libintl.a */,
 				8ABAEB591CDF7C1500F66D33 /* libmad.a */,
 				8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */,
+				8A19E5FE1CF195B900D3393E /* libmodplug.a */,
 				8ABAEAFD1CDF690D00F66D33 /* libogg.a */,
 				8ABAEAC91CDF620800F66D33 /* libpng16.a */,
 				8A7412411CE072A200A52F12 /* libportmidi.a */,
@@ -1745,6 +1739,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PrBoom-Plus" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -2056,6 +2052,7 @@
 					thirdparty/fluidsynth/lib,
 					thirdparty/mad/lib,
 					thirdparty/mikmod/lib,
+					thirdparty/modplug/lib,
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
 					thirdparty/smpeg/lib,
@@ -2092,6 +2089,7 @@
 					thirdparty/fluidsynth/lib,
 					thirdparty/mad/lib,
 					thirdparty/mikmod/lib,
+					thirdparty/modplug/lib,
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
 					thirdparty/smpeg/lib,
