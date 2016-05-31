@@ -1,5 +1,7 @@
 ### Unofficial build environment for PrBoom+ on OS X
 
+Using this build environment you can create a standalone version of **PrBoom+** for OS X 10.5 or newer.
+
 #### Prerequisites
 
 * Mac with Intel CPU
@@ -11,5 +13,6 @@
 
 * Create **~/Library/Application Support/prboom-plus** folder 
 * Copy IWAD file(s) into this folder
+* Clone or download this repository 
 * Open **PrBoom-Plus.xcodeproj**
 * Press `Command+R` or click :arrow_forward: button
