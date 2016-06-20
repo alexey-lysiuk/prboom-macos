@@ -45,7 +45,6 @@
 		8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */; };
 		8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */; };
 		8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */; };
-		8AC016E01CDE1B8100DA951B /* i_system.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A7F1CDDDD6600ED0040 /* i_system.m */; };
 		8AC016E21CDE1B8C00DA951B /* pcsound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADC1CDDDD6600ED0040 /* pcsound.c */; };
 		8AC016E31CDE1B8E00DA951B /* pcsound_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADF1CDDDD6600ED0040 /* pcsound_sdl.c */; };
 		8AC016E61CDE1B9F00DA951B /* i_joy.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8B0D1CDDDD6700ED0040 /* i_joy.c */; };
@@ -189,6 +188,7 @@
 		8ADB74671CE85C5A00D56111 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0151B1CDE170F00DA951B /* AudioUnit.framework */; };
 		8ADB74721CE85C8500D56111 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411C41CE06F9000A52F12 /* CoreAudio.framework */; };
 		8ADB747D1CE85CE400D56111 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADB747C1CE85CE400D56111 /* CoreVideo.framework */; };
+		8ADCB02B1D17D29C00BB6884 /* i_system.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCB02A1D17D29500BB6884 /* i_system.m */; };
 		8AEC8A101CDDDCFC00ED0040 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A0E1CDDDCFC00ED0040 /* MainMenu.nib */; };
 		8AEC8B5F1CDDDE1300ED0040 /* ANSIString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A741CDDDD6600ED0040 /* ANSIString.m */; };
 		8AEC8B601CDDDE1400ED0040 /* ConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A771CDDDD6600ED0040 /* ConsoleController.m */; };
@@ -558,6 +558,7 @@
 		8ADB72C01CE85B7C00D56111 /* libSDL2_net.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_net.a; path = thirdparty/SDL2_net/lib/libSDL2_net.a; sourceTree = "<group>"; };
 		8ADB745B1CE85C3700D56111 /* ForceFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForceFeedback.framework; path = /System/Library/Frameworks/ForceFeedback.framework; sourceTree = "<absolute>"; };
 		8ADB747C1CE85CE400D56111 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		8ADCB02A1D17D29500BB6884 /* i_system.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = i_system.m; path = misc/i_system.m; sourceTree = "<group>"; };
 		8AEC8A0F1CDDDCFC00ED0040 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = prboom/src/MAC/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		8AEC8A111CDDDD1D00ED0040 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = prboom/src/MAC/Info.plist; sourceTree = "<group>"; };
 		8AEC8A121CDDDD1D00ED0040 /* Launcher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Launcher.icns; path = prboom/src/MAC/Launcher.icns; sourceTree = "<group>"; };
@@ -1523,6 +1524,7 @@
 			children = (
 				8A9FB6861CDF27BF0006BDE9 /* config.h */,
 				8ABAEB321CDF6D7400F66D33 /* pcreposix.h */,
+				8ADCB02A1D17D29500BB6884 /* i_system.m */,
 				8AC0182A1CDE220900DA951B /* mus_hack.cpp */,
 				8ABAEB311CDF6D7400F66D33 /* copy_files */,
 				8A7412AB1CE082ED00A52F12 /* make_image */,
@@ -1828,7 +1830,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC016E01CDE1B8100DA951B /* i_system.m in Sources */,
 				8AC0171B1CDE1C5D00DA951B /* dbopl.c in Sources */,
 				8AC0171F1CDE1C5D00DA951B /* dumbplayer.c in Sources */,
 				8AC017231CDE1C5D00DA951B /* flplayer.c in Sources */,
@@ -1944,6 +1945,7 @@
 				8AC017811CDE1CDD00DA951B /* wi_stuff.c in Sources */,
 				8AC017821CDE1CDD00DA951B /* z_bmalloc.c in Sources */,
 				8AC017831CDE1CDD00DA951B /* z_zone.c in Sources */,
+				8ADCB02B1D17D29C00BB6884 /* i_system.m in Sources */,
 				8AC0182B1CDE222300DA951B /* mus_hack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
