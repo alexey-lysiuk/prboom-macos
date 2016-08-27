@@ -1,12 +1,12 @@
-### Unofficial build environment for PrBoom+ on OS X
+### Unofficial build environment for PrBoom+ on macOS
 
-Using this build environment you can create a standalone version of **PrBoom+** for OS X 10.5 or newer.
+Using this build environment you can create a standalone version of **PrBoom+** for macOS 10.5 or newer.
 
 #### Prerequisites
 
 * Mac with Intel CPU
-* OS X 10.6 Snow Leopard or newer
-* [Xcode](https://developer.apple.com/xcode/) 4.1 or newer, _SDL 2.x requires OS X 10.7 SDK_
+* macOS 10.6 Snow Leopard or newer
+* [Xcode](https://developer.apple.com/xcode/) 4.1 or newer, _SDL 2.x requires macOS 10.7 SDK_
 * Doom, Ultimate Doom, Doom II and/or Final Doom IWAD file(s)
 
 #### How to run
