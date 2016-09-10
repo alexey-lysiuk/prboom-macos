@@ -19,7 +19,7 @@ fi
 if [ -z ${WAD_TIME} ]; then
 	NEED_BUILD=YES
 else
-	FILES=`find /Volumes/ramdisk/prboom-osx/prboom/data \( -name '*' \)`
+	FILES=`find "${SRCROOT}/prboom/data" \( -name '*' \)`
 
 	for FILE in ${FILES[@]}; do
 		FILE_TIME=`stat -f %c "${FILE}"`
