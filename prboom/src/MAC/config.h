@@ -69,7 +69,7 @@
 #define USE_GLU_TESS 1
 #define USE_GLU_IMAGESCALE 1
 #define USE_GLU_MIPMAP 1
-#define DISABLE_DOUBLEBUFFER
+#define DISABLE_DOUBLEBUFFER 1
 
 /**/
 #define STDC_HEADERS 1
@@ -89,9 +89,9 @@
 
 #define HAVE_IPv6 1
 
-#define HAVE_UNISTD_H
-#define HAVE_SYS_WAIT_H
-#define HAVE_GETOPT
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_WAIT_H 1
+#define HAVE_GETOPT 1
 /* causes a duplicate define warning
 #define HAVE_NETINET_IN_H
 */
@@ -99,17 +99,17 @@
 
 /**/
 #ifdef __BIG_ENDIAN__
-#define WORDS_BIGENDIAN
+#define WORDS_BIGENDIAN 1
 #endif
 
 #ifdef __i386__
 #define I386_ASM 1
 #endif
 
-#define MACOSX
-#define HAVE_LIBKERN_OSBYTEORDER_H
-#define HAVE_OWN_MUSIC
-#define UPDATE_MUSIC
+#define MACOSX 1
+#define HAVE_LIBKERN_OSBYTEORDER_H 1
+#define HAVE_OWN_MUSIC 1
+#define UPDATE_MUSIC 1
 #define SCREENSHOT_DIR I_DoomExeDir()
 #define HEAPDUMP_DIR I_DoomExeDir()
 
