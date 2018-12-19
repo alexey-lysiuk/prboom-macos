@@ -44,7 +44,7 @@
 		8ABAEB5A1CDF7C2400F66D33 /* libmad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEB591CDF7C1500F66D33 /* libmad.a */; };
 		8ABAEC651CDF8E6C00F66D33 /* libmikmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */; };
 		8ABAEC661CDF8E9B00F66D33 /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */; };
-		8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */; };
+		8ABAEC701CDF8F2D00F66D33 /* libsmpeg2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg2.a */; };
 		8AC016E21CDE1B8C00DA951B /* pcsound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADC1CDDDD6600ED0040 /* pcsound.c */; };
 		8AC016E31CDE1B8E00DA951B /* pcsound_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8ADF1CDDDD6600ED0040 /* pcsound_sdl.c */; };
 		8AC016E61CDE1B9F00DA951B /* i_joy.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8B0D1CDDDD6700ED0040 /* i_joy.c */; };
@@ -201,6 +201,11 @@
 		8AEC8B681CDDDE1C00ED0040 /* UKMainThreadProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A951CDDDD6600ED0040 /* UKMainThreadProxy.m */; };
 		8AEC8B691CDDDE1D00ED0040 /* WadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC8A971CDDDD6600ED0040 /* WadViewController.m */; };
 		8AEC8B6A1CDDDE3600ED0040 /* PrBoom.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8AEC8A131CDDDD1D00ED0040 /* PrBoom.icns */; };
+		8AFAC23121CA5DDF0060ED63 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7411B21CE06F4700A52F12 /* libiconv.dylib */; };
+		8AFAC23221CA5DE70060ED63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A19E5FC1CF1957F00D3393E /* AudioToolbox.framework */; };
+		8AFAC23521CA7CA80060ED63 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAC23421CA7C640060ED63 /* libwebp.a */; };
+		8AFAC23621CA7CAF0060ED63 /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAC23321CA7C550060ED63 /* libsndfile.a */; };
+		8AFAC23821CA7D220060ED63 /* libvorbisenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFAC23721CA7D130060ED63 /* libvorbisenc.a */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -332,7 +337,7 @@
 		8ABAEB591CDF7C1500F66D33 /* libmad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmad.a; path = thirdparty/mad/lib/libmad.a; sourceTree = "<group>"; };
 		8ABAEC631CDF8E3B00F66D33 /* libFLAC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFLAC.a; path = thirdparty/flac/lib/libFLAC.a; sourceTree = "<group>"; };
 		8ABAEC641CDF8E6C00F66D33 /* libmikmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmikmod.a; path = thirdparty/mikmod/lib/libmikmod.a; sourceTree = "<group>"; };
-		8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsmpeg.a; path = thirdparty/smpeg/lib/libsmpeg.a; sourceTree = "<group>"; };
+		8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsmpeg2.a; path = thirdparty/smpeg/lib/libsmpeg2.a; sourceTree = "<group>"; };
 		8AC014971CDE133C00DA951B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8AC0151B1CDE170F00DA951B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		8AC015311CDE172E00DA951B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -818,6 +823,9 @@
 		8AEC8B561CDDDD6700ED0040 /* z_bmalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = z_bmalloc.h; path = prboom/src/z_bmalloc.h; sourceTree = "<group>"; };
 		8AEC8B571CDDDD6700ED0040 /* z_zone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = z_zone.c; path = prboom/src/z_zone.c; sourceTree = "<group>"; };
 		8AEC8B581CDDDD6700ED0040 /* z_zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = z_zone.h; path = prboom/src/z_zone.h; sourceTree = "<group>"; };
+		8AFAC23321CA7C550060ED63 /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = thirdparty/sndfile/lib/libsndfile.a; sourceTree = "<group>"; };
+		8AFAC23421CA7C640060ED63 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = thirdparty/webp/lib/libwebp.a; sourceTree = "<group>"; };
+		8AFAC23721CA7D130060ED63 /* libvorbisenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbisenc.a; path = thirdparty/vorbis/lib/libvorbisenc.a; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -853,9 +861,12 @@
 				8ABAEAFE1CDF691D00F66D33 /* libogg.a in Frameworks */,
 				8ABAEACA1CDF624A00F66D33 /* libpng16.a in Frameworks */,
 				8A7412421CE072BA00A52F12 /* libportmidi.a in Frameworks */,
-				8ABAEC701CDF8F2D00F66D33 /* libsmpeg.a in Frameworks */,
+				8ABAEC701CDF8F2D00F66D33 /* libsmpeg2.a in Frameworks */,
+				8AFAC23621CA7CAF0060ED63 /* libsndfile.a in Frameworks */,
 				8ABAEAF41CDF68AD00F66D33 /* libvorbis.a in Frameworks */,
+				8AFAC23821CA7D220060ED63 /* libvorbisenc.a in Frameworks */,
 				8ABAEAF51CDF68AD00F66D33 /* libvorbisfile.a in Frameworks */,
+				8AFAC23521CA7CA80060ED63 /* libwebp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,6 +874,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFAC23221CA5DE70060ED63 /* AudioToolbox.framework in Frameworks */,
 				8ADB74671CE85C5A00D56111 /* AudioUnit.framework in Frameworks */,
 				8ADB74661CE85C5700D56111 /* Carbon.framework in Frameworks */,
 				8ADB74531CE85BDC00D56111 /* Cocoa.framework in Frameworks */,
@@ -870,15 +882,9 @@
 				8ADB747D1CE85CE400D56111 /* CoreVideo.framework in Frameworks */,
 				8ADB745C1CE85C3700D56111 /* ForceFeedback.framework in Frameworks */,
 				8ADB74571CE85BE800D56111 /* IOKit.framework in Frameworks */,
+				8AFAC23121CA5DDF0060ED63 /* libiconv.dylib in Frameworks */,
 				8ADB744B1CE85BA000D56111 /* libSDL2.a in Frameworks */,
 				8ADB744C1CE85BA300D56111 /* libSDL2_net.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AC018E21CDE2E3700DA951B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,9 +961,12 @@
 				8ABAEAFD1CDF690D00F66D33 /* libogg.a */,
 				8ABAEAC91CDF620800F66D33 /* libpng16.a */,
 				8A7412411CE072A200A52F12 /* libportmidi.a */,
-				8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg.a */,
+				8ABAEC6F1CDF8EFE00F66D33 /* libsmpeg2.a */,
+				8AFAC23321CA7C550060ED63 /* libsndfile.a */,
 				8ABAEAF21CDF689B00F66D33 /* libvorbis.a */,
+				8AFAC23721CA7D130060ED63 /* libvorbisenc.a */,
 				8ABAEAF31CDF689B00F66D33 /* libvorbisfile.a */,
+				8AFAC23421CA7C640060ED63 /* libwebp.a */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -1704,7 +1713,6 @@
 			buildConfigurationList = 8AC019031CDE2E7200DA951B /* Build configuration list for PBXNativeTarget "rdatawad" */;
 			buildPhases = (
 				8AC018E11CDE2E3700DA951B /* Sources */,
-				8AC018E21CDE2E3700DA951B /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1807,7 +1815,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/misc/copy_files\"";
+			shellScript = "\"${SRCROOT}/misc/copy_files\"\n";
 		};
 		8AC019D81CDE311700DA951B /* Build WAD */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2058,7 +2066,9 @@
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
 					thirdparty/smpeg/lib,
+					thirdparty/sndfile/lib,
 					thirdparty/vorbis/lib,
+					thirdparty/webp/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2095,7 +2105,9 @@
 					thirdparty/png/lib,
 					thirdparty/portmidi/lib,
 					thirdparty/smpeg/lib,
+					thirdparty/sndfile/lib,
 					thirdparty/vorbis/lib,
+					thirdparty/webp/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2185,7 +2197,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2193,7 +2204,7 @@
 					"_DEBUG=1",
 					HAVE_CONFIG_H,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				USE_HEADERMAP = NO;
 			};
@@ -2203,13 +2214,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					HAVE_CONFIG_H,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
