@@ -50,6 +50,14 @@ typedef enum {false, true} dboolean;
 typedef unsigned char byte;
 #endif
 
+#ifdef _MSC_VER
+  #if _MSC_VER < 1300
+    #include <BaseTsd.h>
+    typedef INT_PTR   intptr_t;
+  #endif
+#endif
+
+
 //e6y
 #ifndef MAX
 #define MAX(a,b) ((a)>(b)?(a):(b))
