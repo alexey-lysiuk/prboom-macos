@@ -1573,6 +1573,7 @@ static void P_LoadSideDefs2(int lump)
           {
             sd->skybox_index = R_BoxSkyboxNumForName(msd->toptexture);
           }
+          // fallthrough
 #endif
 
         default:                        // normal cases

@@ -1265,7 +1265,9 @@ int GetFullPath(const char* FileName, const char* ext, char *Buffer, size_t Buff
 
 #ifdef _WIN32
 #include <Mmsystem.h>
+#ifndef __GNUC__
 #pragma comment( lib, "winmm.lib" )
+#endif
 int mus_extend_volume;
 void I_midiOutSetVolumes(int volume)
 {
