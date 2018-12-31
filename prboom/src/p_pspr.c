@@ -144,7 +144,7 @@ static void P_BringUpWeapon(player_t *player)
     S_StartSound (player->mo, sfx_sawup);
 
   if (player->pendingweapon >= NUMWEAPONS)
-    lprintf(LO_WARN, "P_BringUpWeapon: weaponinfo overrun has occured.\n");
+    lprintf(LO_WARN, "P_BringUpWeapon: weaponinfo overrun has occurred.\n");
 
   newstate = weaponinfo[player->pendingweapon].upstate;
 
