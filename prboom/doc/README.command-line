@@ -385,7 +385,7 @@ SYNOPSIS
 DESCRIPTION
        PrBoom  is a version of the 3D shoot'em'up Doom, originally by id soft-
        ware.  It includes, amongst other things, the ability to play with sev-
-       eral  players  connected by a tcp/ip network. prboom-game-server is the
+       eral  players  connected by a udp network. prboom-game-server is the
        `server', that is the program that passes data  between  the  different
        players in the game.
 
@@ -586,7 +586,7 @@ Game Options
 
 Multiplayer Options
        -net hostname[:port]
-              Specifies that a TCP/IP network game is to be started.  hostname
+              Specifies that a UDP network game is to be started.  hostname
               is  the  name of the machine on which the network game server is
               running (prboom-game-server). For more information  about  this,
               see  prboom-game-server(6) and the README that came with prboom.
